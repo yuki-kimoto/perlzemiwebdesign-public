@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/images/giblog-logo.png">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+
+<title>斜めストライプを背景色に設定する方法 - Webデザイン入門 - Webデザイン入門ならPerlゼミのWebデザイン講座</title>
+<meta name="description" content="斜めストライプを背景色に設定する方法です。斜めの大きな２回繰り返すグラデーションを作成して、背景サイズを小さな値にすることで、斜めストライプを背景色に設定できます。">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <!-- header -->
+<div class="main">
+  <h1>
+    <a href="/">Webデザイン入門 - Webデザイン入門ならPerlゼミのWebデザイン講座</a>
+  </h1>
+</div>
+
+      </div>
+      <div class="main">
+        <div class="content">
+          <div class="entry">
+  <div class="top">
+    <!-- top -->
+
+  </div>
+  <div class="middle">
+    <h2><a href="/blog/20200127071759.html">斜めストライプを背景色に設定する方法</a></h2>
+<p>
+  斜めストライプを背景色に設定する方法です。斜めの大きな２回繰り返すグラデーションを作成して、背景サイズを小さな値にすることで、斜めストライプを背景色に設定できます。
+</p>
+<h3>斜めストライプを背景色に設定するCSS</h3>
+<p>
+  斜めストライプを背景色に設定するCSSです。ストライプ幅は、1pxです。
+</p>
+<div>
+  <style>
+    .naname_stripe {
+      background: repeating-linear-gradient(-45deg,#fff 0%,#fff 25%,#DBEDFF 25%, #DBEDFF 50%);
+      background-size:4px 4px;
+    }
+  </style>
+  <div class="naname_stripe">
+    斜めストライプ背景色
+  </div>
+</div>
+<pre>
+background: repeating-linear-gradient(-45deg,#fff 0%,#fff 25%,#DBEDFF 25%, #DBEDFF 50%);
+background-size:4px 4px;
+</pre>
+<h3>ストライプ色を変えるには?</h3>
+<p>
+  #fffは間隔の白色です。その後ろの二つの「#DBEDFF」を変更しましょう。
+</p>
+<div>
+  <style>
+    .naname_stripe_red {
+      background: repeating-linear-gradient(-45deg,#fff 0%,#fff 25%,red 25%, red 50%);
+      background-size:4px 4px;
+    }
+  </style>
+  <div class="naname_stripe_red">
+    斜めストライプ背景色
+  </div>
+</div>
+<pre>
+background: repeating-linear-gradient(-45deg,#fff 0%,#fff 25%,red 25%, red 50%);
+background-size:4px 4px;
+</pre>
+<h3>ストライプ幅を変えるには</h3>
+<p>
+  background-sizeを使うことで調整できます。
+</p>
+<div>
+  <style>
+    .naname_stripe_8px {
+      background: repeating-linear-gradient(-45deg,#fff 0%,#fff 25%,#DBEDFF 25%, #DBEDFF 50%);
+      background-size:8px 8px;
+    }
+  </style>
+  <div class="naname_stripe_8px">
+    斜めストライプ背景色 - ストライプ2px
+  </div>
+</div>
+<pre>
+background: repeating-linear-gradient(-45deg,#fff 0%,#fff 25%,#DBEDFF 25%, #DBEDFF 50%);
+background-size:8px 8px;
+</pre>
+<div>
+  <style>
+    .naname_stripe_16px {
+      background: repeating-linear-gradient(-45deg,#fff 0%,#fff 25%,#DBEDFF 25%, #DBEDFF 50%);
+      background-size:16px 16px;
+    }
+  </style>
+  <div class="naname_stripe_16px">
+    斜めストライプ背景色 - ストライプ4px
+  </div>
+</div>
+<pre>
+background: repeating-linear-gradient(-45deg,#fff 0%,#fff 25%,#DBEDFF 25%, #DBEDFF 50%);
+background-size:16px 16px;
+</pre>
+<h3>背景サイズを指定しないとどうなるの?</h3>
+<p>
+  こうなります。
+</p>
+<div>
+  <style>
+    .naname_stripe_nosize {
+      background: repeating-linear-gradient(-45deg,#fff 0%,#fff 25%,#DBEDFF 25%, #DBEDFF 50%);
+    }
+  </style>
+  <div class="naname_stripe_nosize">
+    背景サイズなし
+  </div>
+</div>
+<pre>
+background: repeating-linear-gradient(-45deg,#fff 0%,#fff 25%,#DBEDFF 25%, #DBEDFF 50%);
+</pre>
+<p>
+  4pxを指定すると、ストライプ幅は1pxになるのは、このような背景を4pxの正方形に入れようとしているからですね。
+</p>
+
+  </div>
+  <div class="bottom">
+    <!-- bottom -->
+
+  </div>
+</div>
+
+        </div>
+        <div class="side">
+          <!-- side -->
+<div class="side-list">
+  <div class="side-list-title">
+    コンテンツ
+  </div>
+  <ul>
+    <li><a href="/list.html">記事一覧</a></li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="footer">
+        <!-- footer -->
+<a href="https://github.com/yuki-kimoto/giblog">Giblog</a>
+
+      </div>
+    </div>
+  </body>
+</html>
