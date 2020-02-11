@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/images/giblog-logo.png">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+
+<title>片側が固定長のメニューを作成する - Webデザイン入門 - Webデザイン入門ならPerlゼミのWebデザイン講座</title>
+<meta name="description" content="片側が固定長のメニューを作成する方法を解説します。HTML5とCSS3では、ウィンドウ幅を計算で求めることができるようになったので、これを利用します。メニューは、固定長のサイドバーの中にulタグを使って、表現します。">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <!-- header -->
+<div class="main">
+  <h1>
+    <a href="/">Webデザイン入門 - Webデザイン入門ならPerlゼミのWebデザイン講座</a>
+  </h1>
+</div>
+
+      </div>
+      <div class="main">
+        <div class="content">
+          <div class="entry">
+  <div class="top">
+    <!-- top -->
+
+  </div>
+  <div class="middle">
+    <h2><a href="/blog/20200211101652.html">片側が固定長のメニューを作成する</a></h2>
+<p>
+  片側が固定長のメニューを作成する方法を解説します。HTML5とCSS3では、ウィンドウ幅を計算で求めることができるようになったので、これを利用します。メニューは、固定長のサイドバーの中にulタグを使って、表現します。
+</p>
+<h3>片側が固定長のメニューの作成</h3>
+<p>
+  片側が固定長のメニューを作成してみましょう。メニューの幅は、200pxの固定長で右側に配置しています。左側のコンテンツは、自動的に伸長します。SEO対策も含めて考えた場合を考慮して、コンテンツを先に記述し、その後ろにメニューを記述するようにします。
+</p>
+<p>
+  calcを使って、ウインドウ幅を計算しているのがポイントです。「display:flex」を使うと、クリアーフィックスなどのテクニックを使わないのでよいので楽です。IE11でも正しく描画されます。
+</p>
+<style>
+  .sidefix_menu {
+    display:flex;
+  }
+  .sidefix_menu ul {
+    width:200px;
+    background:#afa
+  }
+  .sidefix_menu_main {
+    width:calc(100% - 200px);
+    background:#faf;
+  }
+</style>
+<div class="sidefix_menu">
+  <div class="sidefix_menu_main">
+    コンテンツ
+  </div>
+  <ul>
+    <li>カレー</li>
+    <li>りんご</li>
+    <li>焼肉</li>
+  </ul>
+</div>
+<p>
+  片側を固定長のメニューにするサンプルです。
+</p>
+<pre>
+&lt;style&gt;
+  .sidefix_menu {
+    display:flex;
+  }
+  .sidefix_menu ul {
+    width:200px;
+    background:#afa
+  }
+  .sidefix_menu_main {
+    width:calc(100% - 200px);
+    background:#faf;
+  }
+&lt;/style&gt;
+
+&lt;div class="sidefix_menu"&gt;
+  &lt;div class="sidefix_menu_main"&gt;
+    コンテンツ
+  &lt;/div&gt;
+  &lt;ul&gt;
+    &lt;li&gt;カレー&lt;/li&gt;
+    &lt;li&gt;りんご&lt;/li&gt;
+    &lt;li&gt;焼肉&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+<h3>メニューの左右を入れ替えるには、どうすればよいですか?</h3>
+<p>
+  メニューの左右を入れ替えるには「display:flex」を指定した部分の下に「flex-flow: row-reverse;」を指定するだけです。
+</p>
+<p>
+  SEO対策も含めて考えた場合を考慮して、メニューが左側に来る場合も、コンテンツを先に記述し、その後ろにメニューを記述するようにします。メニューよりも、そのページのコンテンツが、SEO対策にとってはるかに重要だからです。
+</p>
+<style>
+  .sidefix_menu_reverse {
+    display:flex;
+    flex-flow:row-reverse;
+  }
+  .sidefix_menu_reverse ul {
+    width:200px;
+    background:#afa
+  }
+  .sidefix_menu__reverse_main {
+    width:calc(100% - 200px);
+    background:#faf;
+  }
+</style>
+<p>
+  メニューの左右を入れ替えるサンプルです。
+</p>
+<div class="sidefix_menu_reverse">
+  <div class="sidefix_menu__reverse_main">
+    コンテンツ
+  </div>
+  <ul>
+    <li>カレー</li>
+    <li>りんご</li>
+    <li>焼肉</li>
+  </ul>
+</div>
+<pre>
+&lt;style&gt;
+  .sidefix_menu_reverse {
+    display:flex;
+    flex-flow:row-reverse;
+  }
+  .sidefix_menu_reverse ul {
+    width:200px;
+    background:#afa
+  }
+  .sidefix_menu__reverse_main {
+    width:calc(100% - 200px);
+    background:#faf;
+  }
+&lt;/style&gt;
+
+&lt;div class="sidefix_menu_reverse"&gt;
+  &lt;div class="sidefix_menu__reverse_main"&gt;
+    コンテンツ
+  &lt;/div&gt;
+  &lt;ul&gt;
+    &lt;li&gt;カレー&lt;/li&gt;
+    &lt;li&gt;りんご&lt;/li&gt;
+    &lt;li&gt;焼肉&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+  </div>
+  <div class="bottom">
+    <!-- bottom -->
+
+  </div>
+</div>
+
+        </div>
+        <div class="side">
+          <!-- side -->
+<div class="side-list">
+  <div class="side-list-title">
+    コンテンツ
+  </div>
+  <ul>
+    <li><a href="/list.html">記事一覧</a></li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="footer">
+        <!-- footer -->
+<a href="https://kimoto-system.co.jp/">サイト運営 木本システム</a> <span style="color:white">&</span> <span style="color:white">Copyright © 2020-2020 Yuki Kimoto</span>
+
+      </div>
+    </div>
+  </body>
+</html>
