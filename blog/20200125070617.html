@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/images/giblog-logo.png">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+
+<title>デフォルトCSSの設定のサンプル - Webデザイン入門 - Webデザイン入門ならPerlゼミのWebデザイン講座</title>
+<meta name="description" content="デフォルトCSSの設定のサンプルです。">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <!-- header -->
+<div class="main">
+  <h1>
+    <a href="/">Webデザイン入門 - Webデザイン入門ならPerlゼミのWebデザイン講座</a>
+  </h1>
+</div>
+
+      </div>
+      <div class="main">
+        <div class="content">
+          <div class="entry">
+  <div class="top">
+    <!-- top -->
+
+  </div>
+  <div class="middle">
+    <h2><a href="/blog/20200125070617.html">デフォルトCSSの設定のサンプル</a></h2>
+<p>
+  デフォルトCSSの設定のサンプルです。
+</p>
+<h3>よく使うデフォルトCSS</h3>
+<h4>パディングとマージンのデフォルトは0</h4>
+<p>
+  すべての要素のパディングとマージンのデフォルトを0に。ブラウザ間の違いをなくすことができます。
+</p>
+<pre>
+* {
+  margin:0;
+  padding:0;
+}
+</pre>
+<h4>ボーダーボックスの有効化</h4>
+<p>
+  すべての要素に、ブロック要素の周囲の枠線を含めて、サイズ計算をしてくれる設定を入れます。これがないと、ボーダーを設定した場合に、サイズ調整がぴったりにならないです。
+</p>
+<pre>
+* {
+  box-sizing: border-box;
+}
+</pre>
+<h3>場合に応じて使用するデフォルトCSS</h3>
+<h4>リンクの下線を消す</h4>
+<p>
+  リンクの下線を消す。デフォルトは、リンクの下線をなしにして、必要な場合に下線を設定するに使います。
+</p>
+<pre>
+a, a:hover, a:visited {
+  text-decoration:none;
+}
+</pre>
+
+  </div>
+  <div class="bottom">
+    <!-- bottom -->
+
+  </div>
+</div>
+
+        </div>
+        <div class="side">
+          <!-- side -->
+<div class="side-list">
+  <div class="side-list-title">
+    コンテンツ
+  </div>
+  <ul>
+    <li><a href="/list.html">記事一覧</a></li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="footer">
+        <!-- footer -->
+<a href="https://kimoto-system.co.jp/">サイト運営 木本システム</a> <span style="color:white">&</span> <span style="color:white">Copyright © 2020-2020 Yuki Kimoto</span>
+
+      </div>
+    </div>
+  </body>
+</html>
