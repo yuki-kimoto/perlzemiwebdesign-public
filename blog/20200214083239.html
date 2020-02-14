@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/images/giblog-logo.png">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+
+<title>画像の縦位置の調整 - アイコンと文字の縦位置をそろえるテクニック - Webデザイン入門 - Webデザイン入門ならPerlゼミのWebデザイン講座</title>
+<meta name="description" content="画像の縦位置を調整する方法を解説します。これを理解すると、アイコンと文字をきれいにそろえることができるようになります。">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <!-- header -->
+<div class="main">
+  <h1>
+    <a href="/">Webデザイン入門 - Webデザイン入門ならPerlゼミのWebデザイン講座</a>
+  </h1>
+</div>
+
+      </div>
+      <div class="main">
+        <div class="content">
+          <div class="entry">
+  <div class="top">
+    <!-- top -->
+
+  </div>
+  <div class="middle">
+    <h2><a href="/blog/20200214083239.html">画像の縦位置の調整 - アイコンと文字の縦位置をそろえるテクニック</a></h3>
+<p>
+  画像の縦位置を調整する方法を解説します。これを理解すると、アイコンと文字をきれいにそろえることができるようになります。
+</p>
+<style>
+  img {
+    -ms-interpolation-mode : nearest-neighbor;
+  }
+</style>
+<h3>画像の縦位置のデフォルト</h3>
+<p>
+  まず最初に画像の縦位置のデフォルトを理解しておきましょう。
+</p>
+<div style="background:#eef">
+  <img src="/images/image-vertical/example.png" width="80"> テキスト
+</div>
+<pre>
+&lt;div style="background:#eef"&gt;
+  &lt;img src="/images/image-vertical/example.png" width="80"&gt; テキスト
+&lt;/div&gt;
+</pre>
+<p>
+  目を凝らして、よく見てほしいのは、下の部分が空いていることです。よくみてくださいね。下側が空いていますね。
+</p>
+<p>
+  上は、ぴったりと、外側のdivに張り付いています。
+</p>
+<p>
+  HTMLにおいて、画像は、ベースラインと呼ばれる位置から上に向かって描画されます。下側が空いているのは、このためです。
+</p>
+<p>
+  上側のスペースは、自動的に計算されます。この画像よりも高さの高い、他の画像やテキストがあった場合や、高さが設定されている場合は、上側のスペースが0になるとは限らないです。
+</p>
+<div style="background:#eef">
+  <img src="/images/image-vertical/example.png" width="80"> <img src="/images/image-vertical/example.png" width="120"> テキスト
+</div>
+<pre>
+&lt;div style="background:#eef"&gt;
+  &lt;img src="/images/image-vertical/example.png" width="80"&gt; &lt;img src="/images/image-vertical/example.png" width="120"&gt; テキスト
+&lt;/div&gt;
+</pre>
+<p>
+  まず画像の縦位置のデフォルトをよく覚えてください。ベースラインから上に向かって描画され、上側のスペースは自動計算され、自分より高い他の要素がない場合は、0になります。
+</p>
+<h3>画像しかない場合に下のスペースを消す</h3>
+<p>
+  画像しかない場合に下のスペースを消す一番簡単な方法は、ベースラインを中央にすることです。ベースラインを中央にするには「vertical-align:middle;」を使います。
+</p>
+<div style="background:#eef">
+  <img src="/images/image-vertical/example.png" width="80" style="vertical-align:middle;">
+</div>
+<pre>
+&lt;div style="background:#eef"&gt;
+  &lt;img src="/images/image-vertical/example.png" width="80" style="vertical-align:middle;"&gt;
+&lt;/div&gt;
+</pre>
+<p>
+  会社やサービスのロゴなど、それしか画像がないという場合に便利です。
+</p>
+<p>
+  テキストが同時に存在している場合は、どうなるでしょうか。見ておきましょう。
+</p>
+<div style="background:#eef">
+  <img src="/images/image-vertical/example.png" width="80" style="vertical-align:middle;"> テキスト
+</div>
+<pre>
+&lt;div style="background:#eef"&gt;
+  &lt;img src="/images/image-vertical/example.png" width="80" style="vertical-align:middle;"&gt; テキスト
+&lt;/div&gt;
+</pre>
+<p>
+  んー、よく目を凝らしてください。ビミョーに、テキストの縦位置が、画像の縦位置とずれていませんか? 見えますか。じっと見てください。
+</p>
+<p>
+  文字の縦位置の真ん中を見つめてください。そして、そのまま視線を右側に移動。「テキスト」の中央位置とは、わずかにずれていますね。
+</p>
+<h3>アイコンとテキストの縦位置をそろえる</h3>
+<p>
+  アイコンとテキストの縦位置をそろえましょう。テキストのフォントの種類によって、ベースライン位置が微妙にずれるかもしれないのは、仕方ないですが、なるべく真ん中に調整してみます。
+</p>
+<p>
+  縦位置を指定するには「vertical-align:ピクセル数;」を使います。画像サイズは、アイコンサイズにしてみますね。
+</p>
+<div style="background:#eef">
+  <img src="/images/image-vertical/example.png" width="60" style="vertical-align:-23px;"> テキスト
+</div>
+<pre>
+&lt;div style="background:#eef"&gt;
+  &lt;img src="/images/image-vertical/example.png" width="60" style="vertical-align:-23px;"&gt; テキスト
+&lt;/div&gt;
+</pre>
+<p>
+  vertical-alignにマイナスのピクセル数を設定するのがポイントです。画像の描画位置を、ベースラインよりも下側からにします。
+</p>
+
+  </div>
+  <div class="bottom">
+    <!-- bottom -->
+
+  </div>
+</div>
+
+        </div>
+        <div class="side">
+          <!-- side -->
+<div class="side-list">
+  <div class="side-list-title">
+    コンテンツ
+  </div>
+  <ul>
+    <li><a href="/list.html">記事一覧</a></li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="footer">
+        <!-- footer -->
+<a href="https://kimoto-system.co.jp/">サイト運営 木本システム</a> <span style="color:white">&</span> <span style="color:white">Copyright © 2020-2020 Yuki Kimoto</span>
+
+      </div>
+    </div>
+  </body>
+</html>
