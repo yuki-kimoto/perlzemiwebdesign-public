@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/images/giblog-logo.png">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+
+<title>マウスオーバーしたときに背景を光らせる - Webデザイン入門 - WebデザインならPerlゼミ</title>
+<meta name="description" content="マウスオーバーしたときに背景を光らせるには、a:hoverのbackgroundに、少し明るい色を設定します。">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <!-- header -->
+<div class="main">
+  <h1>
+    <a href="/">Webデザイン入門 - WebデザインならPerlゼミ</a>
+  </h1>
+</div>
+
+      </div>
+      <div class="main">
+        <div class="content">
+          <div class="entry">
+  <div class="top">
+    <!-- top -->
+
+  </div>
+  <div class="middle">
+    <h2><a href="/blog/20200123070617.html">マウスオーバーしたときに背景を光らせる</a></h2>
+<p>
+  マウスオーバーしたときに背景を光らせるには、a:hoverのbackgroundに、少し明るい色を設定します。
+</p>
+<style>
+  .mouse-over-light a {
+    color:white;
+    padding:10px;
+  　width:100%;
+    background:#2E75B6;
+  }
+  .mouse-over-light a:hover {
+    background:#3E85C6;
+  }
+</style>
+<div class="mouse-over-light">
+  <a href="/">ホバーすると背景が光る</a>
+</div>
+<pre style="margin-top:20px;">
+&lt;style&gt;
+  .mouse-over-light a {
+    color:white;
+    padding:10px;
+  　width:100%;
+    background:#2E75B6;
+  }
+  .mouse-over-light a:hover {
+    background:#3E85C6;
+  }
+&lt;/style&gt;
+
+&lt;div class="mouse-over-light"&gt;
+  &lt;a href="/"&gt;ホバーすると背景が光る&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+<h3>少し明るい色を作るには?</h3>
+<p>
+  少し明るい色を作るには、RGB(Red, Green, Blue)のそれぞれの要素に一番上の桁に1を加えます。RGB表示は、16進数なので、9の次はAになります。
+</p>
+<pre>
+#2E75B6;
+</pre>
+<p>
+  2EがR、75がG、B6がBなので、一番上の桁に1を足すと以下になります。
+</p>
+<pre>
+#3E85C6
+</pre>
+<h3>ホバーするときに光らせる効果は?</h3>
+<p>
+  マウスを上に持って行ったときに、光ると、そこを押せると直観的にわかります。
+</p>
+<p>
+  スマートフォンにおいては、関係がありませんので、この効果は補助的な効果と考えて、見ただけで押せるとわかるデザインを考慮する必要があるでしょう。
+</p>
+
+  </div>
+  <div class="bottom">
+    <!-- bottom -->
+
+  </div>
+</div>
+
+        </div>
+        <div class="side">
+          <!-- side -->
+<div class="side-list">
+  <div class="side-list-title">
+    コンテンツ
+  </div>
+  <ul>
+    <li><a href="/list.html">記事一覧</a></li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="footer">
+        <!-- footer -->
+<a style="display:block;height:100%;padding:15px 0;" href="https://kimoto-system.co.jp/">サイト運営 木本システム <br>Copyright © 2020-2020 Yuki Kimoto</a>
+
+      </div>
+    </div>
+  </body>
+</html>
