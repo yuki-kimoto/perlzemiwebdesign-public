@@ -7,8 +7,8 @@
 <link rel="icon" type="image/x-icon" href="/images/webdesign-logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
 
-<title>【HTML5】headタグ - 中にHTMLヘッダを書く場所 - Webデザイン入門 - WebデザインならPerlゼミ</title>
-<meta name="description" content="HTMLヘッダは、headタグの中に書きます。HTMLヘッダには、画面には表示されない補助的な情報を記述します。">
+<title>【HTML5】metaタグ - ページのメタ情報 - Webデザイン入門 - WebデザインならPerlゼミ</title>
+<meta name="description" content="metaタグでは、ページのメタ情報を記述します。以下はmetaタグで指定できる代表的なものです。">
   </head>
   <body>
     <div class="container">
@@ -29,49 +29,50 @@
 
   </div>
   <div class="middle">
-    <h2><a href="/blog/20200202092826.html">【HTML5】headタグ - 中にHTMLヘッダを書く場所</a></h2>
+    <h2><a href="/blog/20200224112719.html">【HTML5】metaタグ - ページのメタ情報</a></h2>
 <p>
-  HTMLヘッダは、<b>headタグ</b>の中に書きます。HTMLヘッダには、画面には表示されない補助的な情報を記述します。
+  metaタグでは、ページのメタ情報を記述します。以下はmetaタグで指定できる代表的なものです。
 </p>
-<pre>
-&lt;head&gt;
-  HTMLヘッダ
-&lt;/head&gt;
-</pre>
-<h3>HTMLヘッダは、HTMLタグの中に書く</h3>
+<ul class="list">
+  <li>文字コード</li>
+  <li>ビューポート</li>
+</ul>
+<h3>metaタグはHTMLヘッダに記述</h3>
 <p>
-  HTMLヘッダは、<a href="/blog/20200204092826.html">htmlタグ</a>の中に書きます。
+  metaタグは<a href="/blog/20200202092826.html">HTMLヘッダ</a>に記述します。
 </p>
 <pre>
 &lt;html&gt;
   &lt;head&gt;
-    HTMLヘッダ
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;
   &lt;/head&gt;
-  &lt;body&gt;
-    コンテンツ
-  &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<h3>HTMLヘッダに指定するもの</h3>
+<h3>文字コードの指定</h3>
 <p>
-  HTMLヘッダでは、以下を指定できます。
+  「meta charset」で文字コードを指定できます。HTMLは、UTF-8で記述して、metaタグのcharsetで、UTF-8を記述しましょう。
 </p>
-<ul class="list">
-  <li>CSSの読み込み</li>
-  <li>JavaScript</li>
-  <li>タイトル</li>
-  <li>文字コード</li>
-  <li>サイトの説明</li>
-  <li>キーワード</li>
-  <li>ファビコン</li>
-  <li>ビューポート</li>
-</ul>
+<pre>
+&lt;meta charset="UTF-8"&gt;
+</pre>
+<h3>ビューポートの指定</h3>
+<p>
+  スマートフォン対応するWebサイトには、ビューポートを指定します。以下の指定で、スマートフォンの横幅に合わせて、描画してくれます。
+</p>
+<pre>
+&lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;
+</pre>
+<h3>metaタグのサンプル</h3>
+<p>
+  <a href="/blog/20200202092826.html">HTMLヘッダ</a>で、metaタグを使ったサンプルです。
+</p>
 <pre>
 &lt;html&gt;
   &lt;head&gt;
     &lt;!-- meta --&gt;
     &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;
+    &lt;meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0"&gt;
     &lt;link rel="icon" type="image/x-icon" href="/images/kimoto-system-favicon.png"&gt;
     &lt;link rel="stylesheet" type="text/css" href="/css/common.css"&gt;
 
@@ -97,33 +98,6 @@
   &lt;/head&gt;
   &lt;body&gt;
     コンテント
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
-<h3>metaタグ</h3>
-<p>
-  文字コードやビューポートを指定する<a href="/blog/20200224112719.html">metaタグ</a>は、HTMLヘッダの中に書きます。
-</p>
-<pre>
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;
-  &lt;/head&gt;
-&lt;/html&gt;
-</pre>
-<h3>HTMLのひな型</h3>
-<p>
-  <a href="/blog/20200205092826.html">DOCTYPE宣言</a>と<a href="/blog/20200204092826.html">htmlタグ</a>、<b>headタグ</b>、<a href="/blog/20200203092826.html">bodyタグ</a>がHTMLのひな型になります。
-</p>
-<pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    HTMLヘッダ
-  &lt;/head&gt;
-  &lt;body&gt;
-    HTMLコンテンツ
   &lt;/body&gt;
 &lt;/html&gt;
 </pre>
