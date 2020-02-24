@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/images/webdesign-logo.png">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+
+<title>iphone/safariで電話番号の文字が青くなってしまうのを解決 - Webデザイン入門 - WebデザインならPerlゼミ</title>
+<meta name="description" content="iphone/safariで電話番号の文字が勝手に青くなってしまうのを解決するには、電話番号をaタグで囲んで、スタイルを設定します。">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <!-- header -->
+<div class="main">
+  <h1>
+    <a href="/">Webデザイン入門 - WebデザインならPerlゼミ</a>
+  </h1>
+</div>
+
+      </div>
+      <div class="main">
+        <div class="content">
+          <div class="entry">
+  <div class="top">
+    <!-- top -->
+
+  </div>
+  <div class="middle">
+    <h2><a href="/blog/20200225082049.html">iphone/safariで電話番号の文字が青くなってしまうのを解決</a></h2>
+<p>
+  iphone/safariで電話番号の文字が勝手に青くなってしまうのを解決するには、電話番号をaタグで囲んで、スタイルを設定します。
+</p>
+<style>
+  .phone a {
+    color:orange;
+  }
+</style>
+<div class="phone">
+  <a>03-1234-5678</a>
+</div>
+<pre>
+&lt;style&gt;
+  .phone a {
+    color:orange;
+  }
+&lt;/style&gt;
+
+&lt;div class="phone"&gt;
+  &lt;a&gt;03-1234-5678&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+<p>
+  iphone/safariは、電話番号の場合に、自動的にaタグを挿入するので、あらかじめaタグを挿入することで、これを防ぎます。
+</p>
+
+  </div>
+  <div class="bottom">
+    <!-- bottom -->
+
+  </div>
+</div>
+
+        </div>
+        <div class="side">
+          <!-- side -->
+<div class="side-list">
+  <div class="side-list-title">
+    コンテンツ
+  </div>
+  <ul>
+    <li><a href="/list.html">記事一覧</a></li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="footer">
+        <!-- footer -->
+<a style="display:block;height:100%;padding:15px 0;" href="https://kimoto-system.co.jp/">サイト運営 木本システム <br>Copyright © 2020-2020 Yuki Kimoto</a>
+
+      </div>
+    </div>
+  </body>
+</html>
