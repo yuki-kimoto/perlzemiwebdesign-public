@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/images/webdesign-logo.png">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+
+<title>jQueryのダウンロードと読み込み方法 - Webデザイン入門 - WebデザインならPerlゼミ</title>
+<meta name="description" content="JavaScriptのライブラリであるjQueryを読み込む方法を解説します。jQueryを使うと、HTMLタグ・CSSの操作や、ajax通信を短い記述で行えます。">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <!-- header -->
+<div class="main">
+  <h1>
+    <a href="/">Webデザイン入門 - WebデザインならPerlゼミ</a>
+  </h1>
+</div>
+
+      </div>
+      <div class="main">
+        <div class="content">
+          <div class="entry">
+  <div class="top">
+    <!-- top -->
+
+  </div>
+  <div class="middle">
+    <h2><a href="/blog/20200219091414.html">jQueryのダウンロードと読み込み方法</a></h2>
+<p>
+  JavaScriptのライブラリであるjQueryを読み込む方法を解説します。jQueryを使うと、HTMLタグ・CSSの操作や、ajax通信を短い記述で行えます。
+</p>
+<h3>jQueryのダウンロード</h3>
+<p>
+  jQueryをダウンロードして使う通常の方法です。
+</p>
+<p>
+  <a href="https://code.jquery.com/jquery/">jQueryのダウンロードページ</a>
+</p>
+<p>
+  2020年2月26日の最新バージョンは、jQuery Core 3.4.1です。jQuery Core 3.4.1の「minified」と呼ばれるリンクを右クリックして、名前を付けて保存しましょう。「minified」は、サイズが小さくされたjQueryです。
+</p>
+<p>
+  <a href="https://code.jquery.com/jquery/"><img src="/images/jquery/jquery-download.png"></a>
+</p>
+<h3>ドキュメントルートにjQueryを配置</h3>
+<p>
+  サーバーのドキュメントルートにjQueryを配置しましょう。ドキュメントルートは、Webサーバーや、Webフレームワークごとに違います。ご自身の環境のドキュメントルートにjQueryを配置しましょう。
+</p>
+<p>
+  わかりやすい用に、jsというディレクトリの中にjQueryを配置します。
+</p>
+<pre>
+js/jquery-3.4.1.min.js
+</pre>
+<h3>jQueryの読み込み</h3>
+<p>
+  jQueryを読み込みましょう。HTMLヘッダでjQueryを読み込みましょう。
+</p>
+<pre>
+&lt;script src="/js/jquery-3.4.1.min.js"&gt;&lt;/script&gt;
+</pre>
+<p>
+  jQueryが正しく読み込まれているか確認するために「Hello, World!」を表示するコードを書いてみましょう。
+</p>
+<pre>
+&lt;script src="/js/jquery-3.4.1.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  $(function () {
+    alert('Hello, World!');
+  });
+&lt;/script&gt;
+</pre>
+<p>
+  「Hello, World!」と表示されると、jQueryの読み込みが成功しています。
+</p>
+<h3>CDNを使って、jQueryを読み込む</h3>
+<p>
+  ダウンロードせずに、CDNを使ってjQueryを読み込む方法です。CDNは、他サイトで提供されているjQueryを自サイトで、読み込む方法です。
+</p>
+<pre>
+&lt;script src="https://code.jquery.com/jquery-3.4.1.min.js"&gt;&lt;/script&gt;
+</pre>
+<p>
+  Webデザイン入門では、jQueryをダウンロードする方法を、Webサイト作成の標準的な方法として紹介しつつ、サンプルコードでは、コピー＆ペーストで試せるように、CDNを活用していきたいと思います。
+</p>
+
+  </div>
+  <div class="bottom">
+    <!-- bottom -->
+
+  </div>
+</div>
+
+        </div>
+        <div class="side">
+          <!-- side -->
+<div class="side-list">
+  <div class="side-list-title">
+    コンテンツ
+  </div>
+  <ul>
+    <li><a href="/list.html">記事一覧</a></li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="footer">
+        <!-- footer -->
+<a style="display:block;height:100%;padding:15px 0;" href="https://kimoto-system.co.jp/">サイト運営 木本システム <br>Copyright © 2020-2020 Yuki Kimoto</a>
+
+      </div>
+    </div>
+  </body>
+</html>
