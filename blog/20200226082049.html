@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/images/webdesign-logo.png">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+
+<title>【HTML5】divタグ - ブロック要素の作成 - Webデザイン入門 - WebデザインならPerlゼミ</title>
+<meta name="description" content="divタグを使うと、ブロック要素を作成できます。">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <!-- header -->
+<div class="main">
+  <h1>
+    <a href="/">Webデザイン入門 - WebデザインならPerlゼミ</a>
+  </h1>
+</div>
+
+      </div>
+      <div class="main">
+        <div class="content">
+          <div class="entry">
+  <div class="top">
+    <!-- top -->
+
+  </div>
+  <div class="middle">
+    <h2><a href="/blog/20200226082049.html">【HTML5】divタグ - ブロック要素の作成</a></h2>
+<p>
+  divタグを使うと、ブロック要素を作成できます。
+</p>
+<div>
+  ブロック要素
+</div>
+<pre>
+&lt;div&gt;
+  ブロック要素
+&lt;/div&gt;
+</pre>
+<h3>横100%の幅がブロック要素のデフォルト</h3>
+<p>
+  横100%の幅がブロック要素のデフォルトです。
+</p>
+<div style="background:pink;">
+  ブロック要素
+</div>
+<pre>
+&lt;div style="background:pink;"&gt;
+  ブロック要素
+&lt;/div&gt;
+</pre>
+<p>
+  divでブロック要素を二つ配置してみましょう。横100%に伸びて、2行になります。
+</p>
+<div style="background:pink;">
+  ブロック要素1
+</div>
+<div style="background:green">
+  ブロック要素2
+</div>
+<pre>
+&lt;div style="background:pink;"&gt;
+  ブロック要素1
+&lt;/div&gt;
+&lt;div style="background:green;"&gt;
+  ブロック要素2
+&lt;/div&gt;
+</pre>
+<h3>ブロック要素は、幅、高さ、上下のマージンを設定できる</h3>
+<p>
+  ブロック要素は、幅、高さ、上下のマージンを持つことができます。
+</p>
+<div style="background:pink;magin-top:10px;margin-bottom:10px;width:80%;height:200px;">
+  ブロック要素1<br>
+  magin-top:10px;<br>
+  margin-bottom:10px;<br>
+  width:80%;<br>
+  height:200px;
+</div>
+<div style="background:green;">
+  ブロック要素2
+</div>
+<pre>
+&lt;div style="background:pink;magin-top:10px;margin-bottom:10px;width:80%;height:300px;"&gt;
+  ブロック要素1
+&lt;/div&gt;
+&lt;div style="background:green;"&gt;
+  ブロック要素2
+&lt;/div&gt;
+</pre>
+<p>
+  インラインブロック要素も、同じです。一方で、インライン要素は、幅、高さ、上下のマージンを設定することができません。
+</p>
+<p>
+  マージンや高さや幅を設定したい場合は、インライン要素ではなく、ブロック要素かインラインブロック要素、フレックス要素を使います。
+</p>
+<h3>ブロック要素を設定するCSS</h3>
+<p>
+  ブロック要素を設定するCSSは「display:要素の種類;」です。divタグのデフォルトは、ブロック要素ですが、変更することができます。
+</p>
+<pre>
+&lt;div style="display:block;"&gt;
+  ブロック要素
+&lt;/div&gt;
+&lt;div style="display:inline-block;"&gt;
+  インラインブロック要素
+&lt;/div&gt;
+&lt;div style="display:inline;"&gt;
+  インライン要素
+&lt;/div&gt;
+&lt;div style="display:flex;"&gt;
+  フレックス要素
+&lt;/div&gt;
+</pre>
+<h3>divタグ以外のブロック要素</h3>
+<p>
+  divタグ以外でブロック要素になる、よく使うタグです。
+</p>
+<ul class="list">
+  <li><a href="/blog/20200220091414.html">見出しタグ - h1, h2, h3, h4, h5, h6</a></li>
+  <li>pタグ</li>
+  <li>ulタグ</li>
+</ul>
+<h3>ブロック要素とインラインブロック要素とフレックス要素の使い分けは?</h3>
+<p>
+  ブロック要素とインラインブロック要素とフレックス要素の使い分けは?
+</p>
+<h4>1行1列はブロック要素</h4>
+<p>
+  1行1列で表現できるときは、ブロック要素を使います。
+</p>
+<div style="background:pink;">
+  ブロック要素1
+</div>
+<pre>
+&lt;div style="background:pink;"&gt;
+  ブロック要素1
+&lt;/div&gt;
+</pre>
+<h4>複数行1列はブロック要素</h4>
+<p>
+  複数行1列の場合も、ブロック要素を使います。
+</p>
+<div style="background:pink;">
+  ブロック要素1
+</div>
+<div style="background:green">
+  ブロック要素2
+</div>
+<pre>
+&lt;div style="background:pink;"&gt;
+  ブロック要素1
+&lt;/div&gt;
+&lt;div style="background:green;"&gt;
+  ブロック要素2
+&lt;/div&gt;
+</pre>
+<h4>1行複数列はフレックス要素</h4>
+<p>
+  1行複数列の場合は、フレックス要素を使います。
+</p>
+<div style="display:flex;">
+  <div style="width:50%;background:pink;">
+    列1
+  </div>
+  <div style="width:50%;background:green;">
+    列2
+  </div>
+</div>
+<pre>
+&lt;div style="display:flex;"&gt;
+  &lt;div style="width:50%;background:pink;"&gt;
+    列1
+  &lt;/div&gt;
+  &lt;div style="width:50%;background:green;"&gt;
+    列2
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>
+  <a href="/blog/20200212090234.html">フレックスレイアウト入門</a>で詳しく解説。
+</p>
+<h4>複数行複数列はフレックス要素</h4>
+<p>
+  複数行複数列の場合は、フレックス要素を使い「flex-wrap:wrap;」を指定します。
+</p>
+<div style="display:flex;flex-wrap:wrap;">
+  <div style="width:50%;background:pink;">
+    行1列1
+  </div>
+  <div style="width:50%;background:green;">
+    行1列2
+  </div>
+  <div style="width:50%;background:blue;">
+    行2列1
+  </div>
+  <div style="width:50%;background:red;">
+    行2列2
+  </div>
+</div>
+<pre>
+&lt;div style="display:flex;flex-wrap:wrap;"&gt;
+  &lt;div style="width:50%;background:pink;"&gt;
+    行1列1
+  &lt;/div&gt;
+  &lt;div style="width:50%;background:green;"&gt;
+    行1列2
+  &lt;/div&gt;
+  &lt;div style="width:50%;background:blue;"&gt;
+    行2列1
+  &lt;/div&gt;
+  &lt;div style="width:50%;background:red;"&gt;
+    行2列2
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>
+  <a href="/blog/20200213070617.html">フレックスレイアウトで複数行レイアウト</a>入門で詳しく解説。
+</p>
+<p>
+  インラインブロック要素は、使う機会は少ないでしょう。
+</p>
+<h3>divタグで、ボタンを作るには?</h3>
+<p>
+  divタグを使ってボタンを作るには、次のように考えます。
+</p>
+<p>
+  ・幅を決める
+</p>
+<p>
+  ・右マージンと左マージンを自動にすると、中央に寄る
+</p>
+<h4>幅を決める</h4>
+<p>
+  まずボタンの幅を決めましょう。パソコン画面だと400px。スマートフォン画面だと「幅100%から、30px小さい」とします。
+</p>
+<div style="width:400px;background:pink;">
+  PC用用ボタン
+</div>
+<pre>
+&lt;div style="width:400px;background:pink;"&gt;
+  PC用用ボタン
+&lt;/div&gt;
+</pre>
+<div style="width:calc(100% - 30px);background:pink;">
+  スマフォ用ボタン
+</div>
+<pre>
+&lt;div style="width:calc(100% - 30px);background:pink;"&gt;
+  スマフォ用ボタン
+&lt;/div&gt;
+</pre>
+<h4>左右のマージンを自動にする</h4>
+<p>
+  左右のマージンを自動にすると、ボタンが中央に寄ります。
+</p>
+<div style="width:400px;margin-left:auto;margin-right:auto;background:pink;">
+  PC用用ボタン
+</div>
+<pre>
+&lt;div style="width:400px;margin-left:auto;margin-right:auto;background:pink;"&gt;
+  PC用用ボタン
+&lt;/div&gt;
+</pre>
+<div style="width:calc(100% - 30px);margin-left:auto;margin-right:auto;background:pink;">
+  スマフォ用ボタン
+</div>
+<pre>
+&lt;div style="width:calc(100% - 30px);margin-left:auto;margin-right:auto;background:pink;"&gt;
+  スマフォ用ボタン
+&lt;/div&gt;
+</pre>
+
+  </div>
+  <div class="bottom">
+    <!-- bottom -->
+
+  </div>
+</div>
+
+        </div>
+        <div class="side">
+          <!-- side -->
+<div class="side-list">
+  <div class="side-list-title">
+    コンテンツ
+  </div>
+  <ul>
+    <li><a href="/list.html">記事一覧</a></li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="footer">
+        <!-- footer -->
+<a style="display:block;height:100%;padding:15px 0;" href="https://kimoto-system.co.jp/">サイト運営 木本システム <br>Copyright © 2020-2020 Yuki Kimoto</a>
+
+      </div>
+    </div>
+  </body>
+</html>
