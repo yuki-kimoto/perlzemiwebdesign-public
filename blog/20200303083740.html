@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/images/webdesign-logo.png">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+
+<title>ヘッダーを固定した場合に、アンカーがずれるのを簡単なHTMLとCSSで修正する方法 - Webデザイン入門 - WebデザインならPerlゼミ</title>
+<meta name="description" content="ヘッダーを固定した場合に、アンカーがずれるのを簡単なCSSで修正する方法を紹介します。">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <!-- header -->
+<div class="main">
+  <h1>
+    <a href="/">Webデザイン入門 - WebデザインならPerlゼミ</a>
+  </h1>
+</div>
+
+      </div>
+      <div class="main">
+        <div class="content">
+          <div class="entry">
+  <div class="top">
+    <!-- top -->
+
+  </div>
+  <div class="middle">
+    <h2><a href="/blog/20200303083740.html">ヘッダーを固定した場合に、アンカーがずれるのを簡単なHTMLとCSSで修正する方法</a></h2>
+<p>
+  ヘッダーを固定した場合に、アンカーがずれるのを簡単なCSSで修正する方法を紹介します。
+</p>
+<p>
+  アンカーとというのは「#」で始まるページ内リンクのことです。
+</p>
+<p>
+  <a href="#design">アンカーリンク</a>
+</p>
+<pre>
+&lt;a href="#design"&gt;アンカーリンク&lt;/a&gt;
+
+&lt;h3 id="design"&gt;アンカーリンクのとび先&lt;/h3&gt;
+</pre>
+<p>
+  ヘッダ固定デザインは、スマートフォンサイトを作成する場合に、ユーザー体験が改善されますので、PCサイトでも一般的に使われるようになりましたね。
+</p>
+<p>
+  この場合に、アンカーを使って、リンクを張った場合に、固定ヘッダの裏に、移動先の見出しが隠れてしまうという事象が発生します。
+</p>
+<h3>HTMLとCSSによる簡単な解決方法</h3>
+<p>
+  HTMLとCSSによる簡単な解決方法があります。それは、アンカーのとび先にidを設定するのではなくって、その手前にブロック要素を作り、下マージンを、ヘッダの固定幅よりも少し大きく設定し、そこにidを設定します。
+</p>
+<pre>
+&lt;a href="#design"&gt;アンカーリンク&lt;/a&gt;
+
+&lt;div id="design" style="margin-bottom:60px;"&gt;&lt;/div&gt;
+
+&lt;h3&gt;アンカーリンクのとび先&lt;/h3&gt;
+</pre>
+<p>
+  このように書くことで、簡単に解決できます。
+</p>
+<h3 id="design">アンカーリンクのとび先</h3>
+<p>
+  ここがアンカーリンクのとび先です。
+</p>
+
+  </div>
+  <div class="bottom">
+    <!-- bottom -->
+
+  </div>
+</div>
+
+        </div>
+        <div class="side">
+          <!-- side -->
+<div class="side-list">
+  <div class="side-list-title">
+    コンテンツ
+  </div>
+  <ul>
+    <li><a href="/list.html">記事一覧</a></li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="footer">
+        <!-- footer -->
+<a style="display:block;height:100%;padding:15px 0;" href="https://kimoto-system.co.jp/">サイト運営 木本システム <br>Copyright © 2020-2020 Yuki Kimoto</a>
+
+      </div>
+    </div>
+  </body>
+</html>
