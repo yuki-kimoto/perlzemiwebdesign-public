@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/images/webdesign-logo.png">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+
+<title>【HTML5】spanタグ - インライン要素の作成 - Webデザイン入門 - WebデザインならPerlゼミ</title>
+<meta name="description" content="spanタグは、インライン要素を作成します。">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <!-- header -->
+<div class="main">
+  <h1>
+    <a href="/">Webデザイン入門 - WebデザインならPerlゼミ</a>
+  </h1>
+</div>
+
+      </div>
+      <div class="main">
+        <div class="content">
+          <div class="entry">
+  <div class="top">
+    <!-- top -->
+
+  </div>
+  <div class="middle">
+    <h2><a href="/blog/20200302092656.html">【HTML5】spanタグ - インライン要素の作成</a></h2>
+<p>
+  spanタグは、インライン要素を作成します。
+</p>
+<p>
+  <span>インライン要素</span>
+</p>
+<pre>
+&lt;span&gt;インライン要素&lt;/span&gt;
+</pre>
+<h3>インライン要素の幅は、内側の要素の幅になる</h3>
+<p>
+  インライン要素の幅は、内側の要素の幅になります。
+</p>
+<p>
+  こちら<span style="background:pink;">本日のディナー</span>になります。
+</p>
+<pre>
+こちら&lt;span style="background:pink;"&gt;本日のディナー&lt;/span&gt;になります。
+</pre>
+<p>
+  インライン要素では、幅や高さを指定することはできません。また上下のマージンを指定することはできません。この二つが、<a href="/blog/20200226082049.html">ブロック要素</a>との大きな違いです。
+</p>
+<h3>どんなときにspanタグを使いますか?</h3>
+<p>
+  文字の大きさや色を一部分だけ変えたい場合です。
+</p>
+<h4>電話番号</h4>
+<p>
+  Tel. だけは小さく、電話番号は大きく、色を付けたい場合。
+</p>
+<p>
+  Tel. <span style="color:green;font-size:28px;letter-spacing:3px;">012-3456-7899</span>
+</p>
+<pre>
+Tel. &lt;span style="color:green;font-size:28px;letter-spacing:3px;"&gt;012-3456-7899&lt;/span&gt;
+</pre>
+<h3>インライン要素になるタグ</h3>
+<p>
+  spanタグ以外では、以下のタグがデフォルトでインライン要素になります。
+</p>
+<ul class="list">
+  <li><a href="/blog/20200222082049.html">aタグ</a></li>
+  <li><a href="/blog/20200221093554.html">bタグ</a></li>
+</ul>
+<pre>
+&lt;ul class="list"&gt;
+  &lt;li&gt;&lt;a href="/blog/20200222082049.html"&gt;aタグ&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/blog/20200221093554.html"&gt;bタグ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+<h4>aタグで、高さや幅が効かない</h4>
+<p>
+  aタグで、高さや幅が効かない場合は、aタグが、インライン要素だからです。その場合は「display:block;」で、ブロック要素にしましょう。
+</p>
+<ul>
+  <li><a href="/" style="display:block;width:100%;background:yellow;">aタグで作るボタン1</a></li>
+  <li><a href="/" style="display:block;width:100%;background:pink;">aタグで作るボタン2</a></li>
+</ul>
+<pre>
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="/" style="display:block;width:100%;background:yellow;"&gt;aタグで作るボタン1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/" style="display:block;width:100%;background:pink;"&gt;aタグで作るボタン2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+  </div>
+  <div class="bottom">
+    <!-- bottom -->
+
+  </div>
+</div>
+
+        </div>
+        <div class="side">
+          <!-- side -->
+<div class="side-list">
+  <div class="side-list-title">
+    コンテンツ
+  </div>
+  <ul>
+    <li><a href="/list.html">記事一覧</a></li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="footer">
+        <!-- footer -->
+<a style="display:block;height:100%;padding:15px 0;" href="https://kimoto-system.co.jp/">サイト運営 木本システム <br>Copyright © 2020-2020 Yuki Kimoto</a>
+
+      </div>
+    </div>
+  </body>
+</html>
