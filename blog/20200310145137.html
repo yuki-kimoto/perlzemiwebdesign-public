@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/images/webdesign-logo.png">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+
+<title>jQueryでテキストフィールドの変更検知 - インクリメンタルサーチの基礎 - Webデザイン入門 - WebデザインならPerlゼミ</title>
+<meta name="description" content="jQueryでテキストフィールドの変更を検知する方法です。インクリメンタルサーチを実装する場合に、基礎となる知識です。">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <!-- header -->
+<div class="main">
+  <h1>
+    <a href="/">Webデザイン入門 - WebデザインならPerlゼミ</a>
+  </h1>
+</div>
+
+      </div>
+      <div class="main">
+        <div class="content">
+          <div class="entry">
+  <div class="top">
+    <!-- top -->
+
+  </div>
+  <div class="middle">
+    <h2><a href="/blog/20200310145137.html">jQueryでテキストフィールドの変更検知 - インクリメンタルサーチの基礎</a></h2>
+<p>
+  jQueryでテキストフィールドの変更を検知する方法です。インクリメンタルサーチを実装する場合に、基礎となる知識です。
+</p>
+<p>
+  inputイベントを使うと、テキストが変更されたことを検知できます。
+</p>
+<h3>jQueryでテキストフィールドの変更を検知するサンプル</h3>
+<p>
+  jQueryでテキストフィールドの変更を検知するサンプルです。テキストフィールドに入力すると「テキストフィールドが変更されました」と表示されます。
+</p>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+  $(function () {
+    /* キーの入力を検知 */
+    $(document).on('input', '[name=foo]', function () {
+      var foo_text = $('[name=foo]').val();
+      $('.changed_text').text('変更検知:' + foo_text);
+    });
+  });
+</script>
+<div class="changed_text">
+  変更検知:
+</div>
+<p>
+  <input type="text" name="foo">
+</p>
+<pre>
+&lt;script src="https://code.jquery.com/jquery-3.4.1.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  $(function () {
+    /* キーの入力を検知 */
+    $(document).on('input', '[name=foo]', function () {
+      var foo_text = $('[name=foo]').val();
+      $('.changed_text').text('変更検知:' + foo_text);
+    });
+  });
+&lt;/script&gt;
+
+&lt;div class="changed_text"&gt;
+  変更検知:
+&lt;/div&gt;
+
+&lt;input type="text" name="foo"&gt;
+</pre>
+<h3>テキストフィールドの変更で、次の文字が入力されている場合は待つ</h3>
+<p>
+  上記の方法は、入力されたときに、全てのinputイベントを拾ってしまいます。
+</p>
+<p>
+  たとえば「木本」と打つと「ｋ」「き」「きｍ」「きも」「きもｔ」「きもと」「木本」と7回もイベントが、発生してしまいます。
+</p>
+<p>
+  インクリメンタルサーチをするときに、たくさんのリクエストが送信されると、嫌ですね。
+</p>
+<p>
+  どうすれば、少ない回数のリクエストが送信できるでしょうか。
+</p>
+<p>
+  次のアルゴリズムを使います。
+</p>
+<p>
+  1秒待って、次の入力が行われていなければ、検知する。次の入力が行われていないとは、文字の変更がないことをいいます。
+</p>
+<p>
+  setTimeout関数を使って、実装します。
+</p>
+<script>
+  $(function () {
+    /* テキストフィールドの値を保存 */
+    var save_one_second_before_wait_text = '';
+    
+    /* キーの入力を検知 */
+    $(document).on('input', '[name=foo_wait]', function () {
+      /* 今の値を保存しておく */
+      save_one_second_before_wait_text = $('[name=foo_wait]').val();
+      setTimeout(function () {
+        var foo_wait_text = $('[name=foo_wait]').val();
+        /* 以前の値と異なっていた場合に処理を実行 */
+        if (save_one_second_before_wait_text === foo_wait_text) {
+          $('.changed_text_wait').text('変更検知:' + foo_wait_text);
+        }
+      }, 1000);
+    });
+  });
+</script>
+<div class="changed_text_wait">
+  変更検知:
+</div>
+<p>
+  <input type="text" name="foo_wait">
+</p>
+<pre>
+&lt;script src="https://code.jquery.com/jquery-3.4.1.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  $(function () {
+    /* テキストフィールドの値を保存 */
+    var save_one_second_before_wait_text = '';
+    
+    /* キーの入力を検知 */
+    $(document).on('input', '[name=foo_wait]', function () {
+      /* 今の値を保存しておく */
+      save_one_second_before_wait_text = $('[name=foo_wait]').val();
+      setTimeout(function () {
+        var foo_wait_text = $('[name=foo_wait]').val();
+        /* 以前の値と異なっていた場合に処理を実行 */
+        if (save_one_second_before_wait_text === foo_wait_text) {
+          $('.changed_text_wait').text('変更検知:' + foo_wait_text);
+        }
+      }, 1000);
+    });
+  });
+&lt;/script&gt;
+
+&lt;div class="changed_text_wait"&gt;
+  変更検知:
+&lt;/div&gt;
+
+&lt;input type="text" name="foo_wait"&gt;
+</pre>
+
+  </div>
+  <div class="bottom">
+    <!-- bottom -->
+
+  </div>
+</div>
+
+        </div>
+        <div class="side">
+          <!-- side -->
+<div class="side-list">
+  <div class="side-list-title">
+    コンテンツ
+  </div>
+  <ul>
+    <li><a href="/list.html">記事一覧</a></li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="footer">
+        <!-- footer -->
+<a style="display:block;height:100%;padding:15px 0;" href="https://kimoto-system.co.jp/">サイト運営 木本システム <br>Copyright © 2020-2020 Yuki Kimoto</a>
+
+      </div>
+    </div>
+  </body>
+</html>
