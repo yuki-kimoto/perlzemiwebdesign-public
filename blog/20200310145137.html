@@ -94,24 +94,26 @@
   1秒待って、次の入力が行われていなければ、検知する。次の入力が行われていないとは、文字の変更がないことをいいます。
 </p>
 <p>
-  setTimeout関数を使って、実装します。
+  setTimeout関数と、クロージャー変数に以前の値を保存するために、クロージャーを使って、実装します。
 </p>
 <script>
   $(function () {
-    /* テキストフィールドの値を保存 */
-    var save_one_second_before_wait_text = '';
-    
     /* キーの入力を検知 */
     $(document).on('input', '[name=foo_wait]', function () {
-      /* 今の値を保存しておく */
-      save_one_second_before_wait_text = $('[name=foo_wait]').val();
-      setTimeout(function () {
-        var foo_wait_text = $('[name=foo_wait]').val();
-        /* 以前の値と異なっていた場合に処理を実行 */
-        if (save_one_second_before_wait_text === foo_wait_text) {
-          $('.changed_text_wait').text('変更検知:' + foo_wait_text);
-        }
-      }, 1000);
+      /* テキストフィールドの今の値をクロージャー変数に保存 */
+      var save_one_second_before_wait_text = $('[name=foo_wait]').val();
+      
+      /* クロージャーを実行 */
+      var closure = function () {
+        setTimeout(function () {
+          var foo_wait_text = $('[name=foo_wait]').val();
+          /* 以前の値と異なっていた場合に処理を実行 */
+          if (save_one_second_before_wait_text === foo_wait_text) {
+            $('.changed_text_wait').text('変更検知:' + foo_wait_text);
+          }
+        }, 1000);
+      };
+      closure();
     });
   });
 </script>
@@ -125,20 +127,22 @@
 &lt;script src="https://code.jquery.com/jquery-3.4.1.min.js"&gt;&lt;/script&gt;
 &lt;script&gt;
   $(function () {
-    /* テキストフィールドの値を保存 */
-    var save_one_second_before_wait_text = '';
-    
     /* キーの入力を検知 */
     $(document).on('input', '[name=foo_wait]', function () {
-      /* 今の値を保存しておく */
-      save_one_second_before_wait_text = $('[name=foo_wait]').val();
-      setTimeout(function () {
-        var foo_wait_text = $('[name=foo_wait]').val();
-        /* 以前の値と異なっていた場合に処理を実行 */
-        if (save_one_second_before_wait_text === foo_wait_text) {
-          $('.changed_text_wait').text('変更検知:' + foo_wait_text);
-        }
-      }, 1000);
+      /* テキストフィールドの今の値をクロージャー変数に保存 */
+      var save_one_second_before_wait_text = $('[name=foo_wait]').val();
+      
+      /* クロージャーを実行 */
+      var closure = function () {
+        setTimeout(function () {
+          var foo_wait_text = $('[name=foo_wait]').val();
+          /* 以前の値と異なっていた場合に処理を実行 */
+          if (save_one_second_before_wait_text === foo_wait_text) {
+            $('.changed_text_wait').text('変更検知:' + foo_wait_text);
+          }
+        }, 1000);
+      };
+      closure();
     });
   });
 &lt;/script&gt;
