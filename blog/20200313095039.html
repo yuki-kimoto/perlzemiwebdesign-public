@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/images/webdesign-logo.png">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+
+<title>フォームの中でサブミットしないボタンを作成する - Webデザイン入門 - WebデザインならPerlゼミ</title>
+<meta name="description" content="フォームの中でサブミットしないボタンを作成する方法を解説します。">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <!-- header -->
+<div class="main">
+  <h1>
+    <a href="/">Webデザイン入門 - WebデザインならPerlゼミ</a>
+  </h1>
+</div>
+
+      </div>
+      <div class="main">
+        <div class="content">
+          <div class="entry">
+  <div class="top">
+    <!-- top -->
+
+  </div>
+  <div class="middle">
+    <h2><a href="/blog/20200313095039.html">フォームの中でサブミットしないボタンを作成する</a></h2>
+<p>
+  フォームの中でサブミットしないボタンを作成する方法を解説します。
+</p>
+<p>
+  ブラウザのデフォルトの動作は、フォームの中に、サブミットボタンあるいは、ボタンがあると、フォームをサブミットしようとします。
+</p>
+<form>
+  <input type="text">
+  <input type="submit" value="登録する">
+</form>
+<form>
+  <input type="text">
+  <button>登録する</button>
+</form>
+<pre>
+&lt;form&gt;
+  &lt;input type="text"&gt;
+  &lt;input type="submit" value="登録する"&gt;
+&lt;/form&gt;
+
+&lt;form&gt;
+  &lt;input type="text"&gt;
+  &lt;button&gt;登録する&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+<p>
+  クリックしてみてください。ブラウザのデフォルトの動作であるサブミットが起こって、ページが更新されています。
+</p>
+<h3>フォームの中でサブミットしないボタン</h3>
+<p>
+  現代的な<a href="https://web.perlzemi.com/">Webシステム開発</a>においては、データの更新は、ajaxを使ってJavaScriptを行いたいという要望があります。ページの遷移を起こさずに、データを更新したいためです。
+</p>
+<p>
+  そのため、フォームの中でサブミットしないボタンが欲しいですね。実は「type=button」とすると、サブミットしないボタンになります。
+</p>
+<form>
+  <input type="text">
+  <button type="button">登録する</button>
+</form>
+<pre>
+&lt;form&gt;
+  &lt;input type="text"&gt;
+  &lt;button type="button"&gt;登録する&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+<p>
+  クリックしてみてください。ページの遷移が起こりませんね。
+</p>
+<h3>ajaxでフォームの内容を送信するサンプル</h3>
+<p>
+  jQueryとJavaScritpで、ajaxでフォームの内容を送信するサンプルを書いてみます。これは、実際には、サーバーサイド側の実装がないので、動かないことにご注意。取得したフォームの内容は、表示してみます。名前と年齢を入力して、登録ボタンを押してください。サーバー側の実装は、何も存在しないので、セキュリティエンジニアの皆さんも安心して、押してください。
+</p>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+  $(document).on('click', '.myform .submit', function () {
+    var data = $(this).closest('form').serialize();
+    
+    // 内容を見てみる
+    alert(data);
+    
+    // ajaxでフォーム委の内容を送信
+    /*
+      $.post('/path', data, function () {
+        
+      });
+    */
+  });
+</script>
+<div class="myform">
+  <form>
+    <div>
+      名前: <input type="text" name="name">
+    </div>
+    <div>
+      年齢: <input type="text" name="age">
+    </div>
+    <div>
+      <button type="button" class="submit">登録する</button>
+    </div>
+  </form>
+</div>
+<pre>
+&lt;script src="https://code.jquery.com/jquery-3.4.1.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  $(document).on('click', '.myform .submit', function () {
+    var data = $(this).closest('form').serialize();
+    
+    // 内容を見てみる
+    alert(data);
+    
+    // ajaxでフォーム委の内容を送信
+    /*
+      $.post('/path', data, function () {
+        
+      });
+    */
+  });
+&lt;/script&gt;
+
+&lt;div class="myform"&gt;
+  &lt;form&gt;
+    &lt;div&gt;
+      名前: &lt;input type="text" name="name"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      年齢: &lt;input type="text" name="age"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;button type="button" class="submit"&gt;登録する&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+</pre>
+
+  </div>
+  <div class="bottom">
+    <!-- bottom -->
+
+  </div>
+</div>
+
+        </div>
+        <div class="side">
+          <!-- side -->
+<div class="side-list">
+  <div class="side-list-title">
+    コンテンツ
+  </div>
+  <ul>
+    <li><a href="/list.html">記事一覧</a></li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="footer">
+        <!-- footer -->
+<a href="https://kimoto-system.co.jp/message">サイト運営 木本システム <br>Copyright © 2020-2020 Yuki Kimoto</a>
+
+      </div>
+    </div>
+  </body>
+</html>
