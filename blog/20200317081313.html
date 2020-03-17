@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/images/webdesign-logo.png">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+
+<title>【HTML5】テキストフィールド - テキスト入力のフォーム部品 - Webデザイン入門 - WebデザインならPerlゼミ</title>
+<meta name="description" content="テキストフィールドは、テキストを入力するためのフォーム部品です。inputタグで「type="text"」を指定します。">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <!-- header -->
+<div class="main">
+  <h1>
+    <a href="/">Webデザイン入門 - WebデザインならPerlゼミ</a>
+  </h1>
+</div>
+
+      </div>
+      <div class="main">
+        <div class="content">
+          <div class="entry">
+  <div class="top">
+    <!-- top -->
+
+  </div>
+  <div class="middle">
+    <h2><a href="/blog/20200317081313.html">【HTML5】テキストフィールド - テキスト入力のフォーム部品</a></h2>
+<p>
+  テキストフィールドは、テキストを入力するためのフォーム部品です。inputタグで「type="text"」を指定します。
+</p>
+<p>
+  <input type="text" name="address">
+</p>
+<pre>
+&lt;input type="text" name="address"&gt;
+</pre>
+<p>
+  テキストを入力することができます。フォーム部品なので、name属性で、名前を付けておくことが一般的です。
+</p>
+<h3>テキストフィールドは、インラインブロック要素</h3>
+<p>
+  テキストフィールドは、デフォルトで、インラインブロック要素です。インラインブロック要素なので、左側に流れ、高さや幅を設定することができます。
+</p>
+<div>
+  <input type="text" name="address" style="width:100px;height:50px;">
+  <input type="text" name="tel" style="width:200px;height:80px;">
+</div>
+<pre>
+&lt;input type="text" name="address" style="width:100px;height:50px;"&gt;
+&lt;input type="text" name="tel" style="width:200px;height:80px;"&gt;
+</pre>
+<h3>テキストフィールドに、フォントサイズ、パディングを設定する</h3>
+<p>
+  デフォルトのテキストフィールドは、スマートフォンをメインに考えると、少し小さいです。テキストフィールドに、適切なパディングを設定してみましょう。
+</p>
+<p>
+  <input type="text" name="address" style="padding:11px 5px 9px 5px;font-size:16px;">
+</p>
+<pre>
+&lt;input type="text" name="address" style="padding:12px 5px 10px 5px;"&gt;
+</pre>
+<h3>iphone/safari対応するために、テキストフィールドのフォントサイズは、16px以上に</h3>
+<p>
+  iphone/safari対応するために、テキストフィールドのフォントサイズは、16px以上にしましょう。<a href="/blog/20200309145137.html">iphone/safariでフォーム入力時の自動拡大機能をoff</a>にするためのです。
+</p>
+<h3>ラベルをクリックしたときに、フォーカスが当たるようにする</h3>
+<p>
+  テキストフィールドだけではなく、項目見出しをクリックしたときに、フォーカスが当たるようにするにはlabelタグを使います。
+</p>
+<p>
+  <label for="address">住所:</label> <input type="text" name="address" id="address">
+</p>
+<pre>
+&lt;label for="address"&gt;住所:&lt;/label&gt; &lt;input type="text" name="address" id="address"&gt;
+</pre>
+<p>
+  住所というラベルをクリックしてみてください。テキストフィールドに、フォーカスが当たります。
+</p>
+<h3>フォーム送信時に、jQueryでフォームのテキストフィールドの値を取得する</h3>
+<p>
+  送信ボタンを押したタイミングで、テキストフィールドの値を取得する<a href="/blog/20200219091414.html">jQuery</a>を使ったサンプルです。ajaxでPOSTリクエストを送信するときに、よく使います。取得した内容を、alertで表示しています。
+</p>
+<h4>フォームのすべての値を取得する方法</h4>
+<p>
+  フォームのすべての値を取得する方法です。
+</p>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+  $(function () {
+    $(document).on('click', '.form-text-field-all .submit_button', function () {
+      
+      /* フォームのすべての値を取得する方法 */
+      var data = $(this).closest('form').serialize();
+      
+      alert(data);
+    });
+  });
+</script>
+<div class="form-text-field-all">
+  <form>
+    <div>
+      住所: <input type="text" name="address">
+    </div>
+    <div>
+      電話番号: <input type="text" name="tel">
+    </div>
+    <button type="button" class="submit_button">送信</button>
+  </form>
+</div>
+<pre>
+&lt;script src="https://code.jquery.com/jquery-3.4.1.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  $(function () {
+    $(document).on('click', '.form-text-field-all .submit_button', function () {
+      
+      /* フォームのすべての値を取得する方法 */
+      var data = $(this).closest('form').serialize();
+      
+      alert(data);
+    });
+  });
+&lt;/script&gt;
+
+&lt;div class="form-text-field-all"&gt;
+  &lt;form&gt;
+    &lt;div&gt;
+      住所: &lt;input type="text" name="address"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      電話番号: &lt;input type="text" name="tel"&gt;
+    &lt;/div&gt;
+    &lt;button type="button" class="submit_button"&gt;送信&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+</pre>
+<p>
+  on('click')をdocumentから始めているのは、動的なHTMLの書き換えに対応するためです。ドキュメントトップからたどると、HTMLの部分が動的に書き換えられた場合も、正しく動作します。buttonに「type="button"」を指定しておくと、<a href="/blog/20200313095039.html">フォームのボタンのサブミットの動作がなくなくす</a>ことができます。
+</p>
+<h4>個別のテキストフィールドの値を取得する方法</h4>
+<p>
+  個別のテキストフィールドの値を取得する方法です。住所だけを取得しています。
+</p>
+<script>
+  $(function () {
+    $(document).on('click', '.form-text-field-part .submit_button', function () {
+      
+      /* 住所を取得 */
+      var address = $(this).closest('form').find('[name=address]').val();
+      
+      alert(address);
+    });
+  });
+</script>
+<div class="form-text-field-part">
+  <form>
+    <div>
+      住所: <input type="text" name="address">
+    </div>
+    <div>
+      電話番号: <input type="text" name="tel">
+    </div>
+    <button type="button" class="submit_button">送信</button>
+  </form>
+</div>
+<pre>
+&lt;script src="https://code.jquery.com/jquery-3.4.1.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  $(function () {
+    $(document).on('click', '.form-text-field-part .submit_button', function () {
+      
+      /* 住所を取得 */
+      var address = $(this).closest('form').find('[name=address]').val();
+      
+      alert(address);
+    });
+  });
+&lt;/script&gt;
+
+&lt;div class="form-text-field-part"&gt;
+  &lt;form&gt;
+    &lt;div&gt;
+      住所: &lt;input type="text" name="address"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      電話番号: &lt;input type="text" name="tel"&gt;
+    &lt;/div&gt;
+    &lt;button type="button" class="submit_button"&gt;送信&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+</pre>
+
+  </div>
+  <div class="bottom">
+    <!-- bottom -->
+
+  </div>
+</div>
+
+        </div>
+        <div class="side">
+          <!-- side -->
+<div class="side-list">
+  <div class="side-list-title">
+    コンテンツ
+  </div>
+  <ul>
+    <li><a href="/list.html">記事一覧</a></li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="footer">
+        <!-- footer -->
+<a href="https://kimoto-system.co.jp/message">サイト運営 木本システム <br>Copyright © 2020-2020 Yuki Kimoto</a>
+
+      </div>
+    </div>
+  </body>
+</html>
