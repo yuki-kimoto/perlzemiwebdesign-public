@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/images/webdesign-logo.png">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+
+<title>【HTML5】テキストエリア(textarea) - 複数行テキスト入力のフォーム部品 - Webデザイン入門 - WebデザインならPerlゼミ</title>
+<meta name="description" content="テキストエリアは、複数行のテキストを入力するためのフォーム部品です。テキストエリアを作成するには、textareaタグを使用します。">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <!-- header -->
+<div class="main">
+  <h1>
+    <a href="/">Webデザイン入門 - WebデザインならPerlゼミ</a>
+  </h1>
+</div>
+
+      </div>
+      <div class="main">
+        <div class="content">
+          <div class="entry">
+  <div class="top">
+    <!-- top -->
+
+  </div>
+  <div class="middle">
+    <h2><a href="/blog/20200320094150.html">【HTML5】テキストエリア(textarea) - 複数行テキスト入力のフォーム部品</a></h2>
+<p>
+  テキストエリアは、複数行のテキストを入力するためのフォーム部品です。テキストエリアを作成するには、textareaタグを使用します。
+</p>
+<p>
+  <textarea name="message"></textarea>
+</p>
+<pre>
+&lt;textarea name="message"&gt;&lt;/textarea&gt;
+</pre>
+<p>
+  複数行のテキストを入力することができます。フォーム部品なので、name属性で、名前を付けておくことが一般的です。
+</p>
+<h3>テキストエリアは、インラインブロック要素</h3>
+<p>
+  テキストエリアは、デフォルトで、インラインブロック要素です。インラインブロック要素なので、左側に流れ、高さや幅を設定することができます。
+</p>
+<div>
+  <textarea name="message" style="width:100px;height:50px;"></textarea>
+  <textarea name="message" style="width:200px;height:80px;"></textarea>
+</div>
+<pre>
+&lt;textarea name="message" style="width:100px;height:50px;"&gt;&lt;/textarea&gt;
+&lt;textarea name="message" style="width:200px;height:80px;"&gt;&lt;/textarea&gt;
+</pre>
+<h3>テキストエリアに、フォントサイズ、最小の高さ、パディングを設定する</h3>
+<p>
+  デフォルトのテキストエリアは、スマートフォンをメインに考えると、少し小さいです。テキストエリアに、適切なフォントサイズ、最小の高さ、パディングをパディングを設定してみましょう。
+</p>
+<p>
+  <textarea style="padding:11px 5px 9px 5px;font-size:16px;min-height:200px;"></textarea>
+</p>
+<pre>
+&lt;textarea style="padding:11px 5px 9px 5px;font-size:16px;min-height:200px;"&gt;&lt;/textarea&gt;
+</pre>
+<h3>iphone/safari対応するために、テキストエリアのフォントサイズは、16px以上に</h3>
+<p>
+  iphone/safari対応するために、テキストエリアのフォントサイズは、16px以上にしましょう。<a href="/blog/20200309145137.html">iphone/safariでフォーム入力時の自動拡大機能をoff</a>にするためのです。
+</p>
+<h3>iphone/safariで、フォーム部品にデフォルトのデザインが適用されるのを防ぐ</h3>
+<p>
+  iphone/safariで、フォーム部品にデフォルトのデザインが適用されるのを防ぐには、「-webkit-appearance:none;」を指定します。<a href="/blog/20200228082258.html">iphone/safariで、テキストエリアやボタンのデフォルトデザインが適用されてしまうのを解決</a>を参考にしてください。
+</p>
+<h3>ラベルをクリックしたときに、フォーカスが当たるようにする</h3>
+<p>
+  テキストエリアだけではなく、項目見出しをクリックしたときに、フォーカスが当たるようにするにはlabelタグを使います。inputタグの中のid属性で指定した名前をlabelタグのfor属性に指定します。
+</p>
+<p>
+  <label for="message">お問い合わせ内容:</label> <textarea name="message" id="message"></textarea>
+</p>
+<pre>
+&lt;label for="message"&gt;お問い合わせ内容:&lt;/label&gt; &lt;input type="text" name="message" id="message"&gt;
+</pre>
+<p>
+  お問い合わせ内容というラベルをクリックしてみてください。テキストエリアに、フォーカスが当たります。
+</p>
+<h3>フォーム送信時に、jQueryでフォームのテキストエリアの値を取得する</h3>
+<p>
+  送信ボタンを押したタイミングで、テキストエリアの値を取得する<a href="/blog/20200219091414.html">jQuery</a>を使ったサンプルです。ajaxでPOSTリクエストを送信するときに、よく使います。取得した内容を、alertで表示しています。
+</p>
+<h4>フォームのすべての値を取得する方法</h4>
+<p>
+  フォームのすべての値を取得する方法です。
+</p>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+  $(function () {
+    $(document).on('click', '.form-text-field-all .submit_button', function () {
+      
+      /* フォームのすべての値を取得する方法 */
+      var data = $(this).closest('form').serialize();
+      
+      alert(data);
+    });
+  });
+</script>
+<div class="form-text-field-all">
+  <form>
+    <div>
+      お問い合わせ内容: <textarea name="message"></textarea>
+    </div>
+    <button type="button" class="submit_button">送信</button>
+  </form>
+</div>
+<pre>
+&lt;script src="https://code.jquery.com/jquery-3.4.1.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  $(function () {
+    $(document).on('click', '.form-text-field-all .submit_button', function () {
+      
+      /* フォームのすべての値を取得する方法 */
+      var data = $(this).closest('form').serialize();
+      
+      alert(data);
+    });
+  });
+&lt;/script&gt;
+
+&lt;div class="form-text-field-all"&gt;
+  &lt;form&gt;
+    &lt;div&gt;
+      お問い合わせ内容: &lt;textarea name="message"&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+    &lt;button type="button" class="submit_button"&gt;送信&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+</pre>
+<p>
+  on('click')をdocumentから始めているのは、動的なHTMLの書き換えに対応するためです。ドキュメントトップからたどると、HTMLの部分が動的に書き換えられた場合も、正しく動作します。buttonに「type="button"」を指定しておくと、<a href="/blog/20200313095039.html">フォームのボタンのサブミットの動作がなくなくす</a>ことができます。
+</p>
+<h4>個別のテキストエリアの値を取得する方法</h4>
+<p>
+  個別のテキストエリアの値を取得する方法です。お問い合わせ内容だけを取得しています。
+</p>
+<script>
+  $(function () {
+    $(document).on('click', '.form-text-field-part .submit_button', function () {
+      
+      /* お問い合わせ内容を取得 */
+      var message = $(this).closest('form').find('[name=message]').val();
+      
+      alert(message);
+    });
+  });
+</script>
+<div class="form-text-field-part">
+  <form>
+    <div>
+      お問い合わせ内容: <textarea name="message"></textarea>
+    </div>
+    <button type="button" class="submit_button">送信</button>
+  </form>
+</div>
+<pre>
+&lt;script src="https://code.jquery.com/jquery-3.4.1.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  $(function () {
+    $(document).on('click', '.form-text-field-part .submit_button', function () {
+      
+      /* お問い合わせ内容を取得 */
+      var message = $(this).closest('form').find('[name=message]').val();
+      
+      alert(message);
+    });
+  });
+&lt;/script&gt;
+
+&lt;div class="form-text-field-part"&gt;
+  &lt;form&gt;
+    &lt;div&gt;
+      お問い合わせ内容: &lt;textarea name="message"&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+    &lt;button type="button" class="submit_button"&gt;送信&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+</pre>
+
+  </div>
+  <div class="bottom">
+    <!-- bottom -->
+
+  </div>
+</div>
+
+        </div>
+        <div class="side">
+          <!-- side -->
+<div class="side-list">
+  <div class="side-list-title">
+    コンテンツ
+  </div>
+  <ul>
+    <li><a href="/list.html">記事一覧</a></li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="footer">
+        <!-- footer -->
+<a href="https://kimoto-system.co.jp/message">サイト運営 木本システム <br>Copyright © 2020-2020 Yuki Kimoto</a>
+
+      </div>
+    </div>
+  </body>
+</html>
