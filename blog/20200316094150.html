@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/images/webdesign-logo.png">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+
+<title>【HTML5】ラジオボタン - 項目を選択するフォーム部品 - Webデザイン入門 - WebデザインならPerlゼミ</title>
+<meta name="description" content="ラジオボタンは、項目を選択するためのフォーム部品です。inputタグで「type="radio"」を指定します。どれかを選択すると他の選択は、解除されます。">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <!-- header -->
+<div class="main">
+  <h1>
+    <a href="/">Webデザイン入門 - WebデザインならPerlゼミ</a>
+  </h1>
+</div>
+
+      </div>
+      <div class="main">
+        <div class="content">
+          <div class="entry">
+  <div class="top">
+    <!-- top -->
+
+  </div>
+  <div class="middle">
+    <h2><a href="/blog/20200316094150.html">【HTML5】ラジオボタン - 項目を選択するフォーム部品</a></h2>
+<p>
+  ラジオボタンは、項目を選択するためのフォーム部品です。inputタグで「type="radio"」を指定します。どれかを選択すると他の選択は、解除されます。
+</p>
+  <b>価格</b>
+  <input type="radio" name="price" value="1000">1000円未満
+  <input type="radio" name="price" value="2000">1000円～2000円まで
+  <input type="radio" name="price" value="3000">2000円～3000円まで
+  <input type="radio" name="price" value="99999999">3000円以上
+<pre>
+&lt;b&gt;価格&lt;/b&gt;
+&lt;input type="radio" name="price" value="1000"&gt;1000円未満
+&lt;input type="radio" name="price" value="2000"&gt;1000円～2000円まで
+&lt;input type="radio" name="price" value="3000"&gt;2000円～3000円まで
+&lt;input type="radio" name="price" value="99999999"&gt;3000円以上
+</pre>
+<p>
+  項目を選択することができます。フォーム部品なので、name属性で、名前を付けておくことが一般的です。ラジオボタンは、項目のラベルの部分は含まず、選択部分だけが、ラジオボタンであることに注意してください。
+</p>
+<p>
+  サーバーに送信したい値はvalue属性に指定します。
+</p>
+<p>
+  ラジオボタンは、<a href="/blog/20200319083358.html">セレクトフィールド(select)</a>と用途は同じですが、項目が少ない場合は、ラジオボタンにして、最初から見えるようにするのも、よいでしょう。
+</p>
+<h3>ラジオボタンは、インラインブロック要素</h3>
+<p>
+  ラジオボタンは、デフォルトで、インラインブロック要素です。インラインブロック要素なので、左側に流れます。
+</p>
+<div>
+  <b>価格</b>
+  <input type="radio" name="price" value="1000">1000円未満
+  <input type="radio" name="price" value="2000">1000円～2000円まで
+  <input type="radio" name="price" value="3000">2000円～3000円まで
+  <input type="radio" name="price" value="99999999">3000円以上
+</div>
+<pre>
+  &lt;b&gt;価格&lt;/b&gt;
+  &lt;input type="radio" name="price" value="1000"&gt;1000円未満
+  &lt;input type="radio" name="price" value="2000"&gt;1000円～2000円まで
+  &lt;input type="radio" name="price" value="3000"&gt;2000円～3000円まで
+  &lt;input type="radio" name="price" value="99999999"&gt;3000円以上
+</pre>
+<h3>ラジオボタンをあらかじめチェックする</h3>
+<p>
+  ラジオボタンをあらかじめチェックしておきたいときは「checked="checked"」を指定します。
+</p>
+  <b>価格</b>
+  <input type="radio" name="price" value="1000" checked="checked">1000円未満
+  <input type="radio" name="price" value="2000">1000円～2000円まで
+  <input type="radio" name="price" value="3000">2000円～3000円まで
+  <input type="radio" name="price" value="99999999">3000円以上
+<pre>
+&lt;b&gt;価格&lt;/b&gt;
+&lt;input type="radio" name="price" value="1000" checked="checked"&gt;1000円未満
+&lt;input type="radio" name="price" value="2000"&gt;1000円～2000円まで
+&lt;input type="radio" name="price" value="3000"&gt;2000円～3000円まで
+&lt;input type="radio" name="price" value="99999999"&gt;3000円以上
+</pre>
+<h3>ラジオボタンの各項目のラベルをクリックしたときにフォーカスを当てる</h3>
+<p>
+  ラジオボタンそのものだけでなく、ラジオボタンの各項目の見出しのラベルをクリックしたときに、フォーカスが当たるようにするにはlabelタグを使います。inputタグの中のid属性で指定した名前をlabelタグのfor属性に指定します。
+</p>
+  <b>価格</b>
+  <input type="radio" name="price" id="price1" value="1000"><label for="price1">1000円未満</label>
+  <input type="radio" name="price" id="price2" value="2000"><label for="price2">1000円～2000円まで</label>
+  <input type="radio" name="price" id="price3" value="3000"><label for="price3">2000円～3000円まで</label>
+  <input type="radio" name="price" id="price4" value="99999999"><label for="price4">3000円以上</label>
+<pre>
+&lt;b&gt;価格&lt;/b&gt;
+&lt;input type="radio" name="price" id="price1" value="1000"&gt;&lt;label for="price1"&gt;1000円未満&lt;/label&gt;
+&lt;input type="radio" name="price" id="price2" value="2000"&gt;&lt;label for="price2"&gt;1000円～2000円まで&lt;/label&gt;
+&lt;input type="radio" name="price" id="price3" value="3000"&gt;&lt;label for="price3"&gt;2000円～3000円まで&lt;/label&gt;
+&lt;input type="radio" name="price" id="price4" value="99999999"&gt;&lt;label for="price4"&gt;3000円以上&lt;/label&gt;
+</pre>
+<p>
+  それぞれの価格ラベルをクリックしてみてください。対応するラジオボタンが、フォーカスが当たり選択されます。
+</p>
+<h3>フォーム送信時に、jQueryでフォームのラジオボタンの値を取得する</h3>
+<p>
+  送信ボタンを押したタイミングで、ラジオボタンの値を取得する<a href="/blog/20200219091414.html">jQuery</a>を使ったサンプルです。ajaxでPOSTリクエストを送信するときに、よく使います。取得した内容を、alertで表示しています。
+</p>
+<h4>フォームのすべての値を取得する方法</h4>
+<p>
+  フォームのすべての値を取得する方法です。
+</p>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+  $(function () {
+    $(document).on('click', '.form-text-field-all .submit_button', function () {
+      
+      /* フォームのすべての値を取得する方法 */
+      var data = $(this).closest('form').serialize();
+      
+      alert(data);
+    });
+  });
+</script>
+<div class="form-text-field-all">
+  <form>
+    <b>価格</b>
+    <input type="radio" name="price" value="1000">1000円未満
+    <input type="radio" name="price" value="2000">1000円～2000円まで
+    <input type="radio" name="price" value="3000">2000円～3000円まで
+    <input type="radio" name="price" value="99999999">3000円以上
+    <button type="button" class="submit_button">送信</button>
+  </form>
+</div>
+<pre>
+&lt;script src="https://code.jquery.com/jquery-3.4.1.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  $(function () {
+    $(document).on('click', '.form-text-field-all .submit_button', function () {
+      
+      /* フォームのすべての値を取得する方法 */
+      var data = $(this).closest('form').serialize();
+      
+      alert(data);
+    });
+  });
+&lt;/script&gt;
+
+&lt;div class="form-text-field-all"&gt;
+  &lt;form&gt;
+    &lt;b&gt;価格&lt;/b&gt;
+    &lt;input type="radio" name="price" value="1000"&gt;1000円未満
+    &lt;input type="radio" name="price" value="2000"&gt;1000円～2000円まで
+    &lt;input type="radio" name="price" value="3000"&gt;2000円～3000円まで
+    &lt;input type="radio" name="price" value="99999999"&gt;3000円以上
+    &lt;button type="button" class="submit_button"&gt;送信&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+</pre>
+<p>
+  on('click')をdocumentから始めているのは、動的なHTMLの書き換えに対応するためです。ドキュメントトップからたどると、HTMLの部分が動的に書き換えられた場合も、正しく動作します。buttonに「type="button"」を指定しておくと、<a href="/blog/20200313095039.html">フォームのボタンのサブミットの動作がなくなくす</a>ことができます。
+</p>
+<h4>指定したラジオボタンの値を取得する方法</h4>
+<p>
+  指定したラジオボタンの値を取得する方法です。価格だけを取得しています。
+</p>
+<script>
+  $(function () {
+    $(document).on('click', '.form-text-field-part .submit_button', function () {
+      
+      /* 価格を取得 */
+      var price = $(this).closest('form').find('[name=price]:checked').val();
+      
+      alert(price);
+    });
+  });
+</script>
+<div class="form-text-field-part">
+  <form>
+    <b>価格</b>
+    <input type="radio" name="price" value="1000">1000円未満
+    <input type="radio" name="price" value="2000">1000円～2000円まで
+    <input type="radio" name="price" value="3000">2000円～3000円まで
+    <input type="radio" name="price" value="99999999">3000円以上
+    <button type="button" class="submit_button">送信</button>
+  </form>
+</div>
+<pre>
+&lt;script src="https://code.jquery.com/jquery-3.4.1.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  $(function () {
+    $(document).on('click', '.form-text-field-part .submit_button', function () {
+      
+      /* 価格を取得 */
+      var price = $(this).closest('form').find('[name=price]:checked').val();
+      
+      alert(price);
+    });
+  });
+&lt;/script&gt;
+
+&lt;div class="form-text-field-part"&gt;
+  &lt;form&gt;
+    &lt;b&gt;価格&lt;/b&gt;
+    &lt;input type="radio" name="price" value="1000"&gt;1000円未満
+    &lt;input type="radio" name="price" value="2000"&gt;1000円～2000円まで
+    &lt;input type="radio" name="price" value="3000"&gt;2000円～3000円まで
+    &lt;input type="radio" name="price" value="99999999"&gt;3000円以上
+    &lt;button type="button" class="submit_button"&gt;送信&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+</pre>
+<h3>ラジオボタンをオリジナルのデザインにする</h3>
+<p>
+  ラジオボタンは、マウスクリックであれば、スマートフォンでは、少し使いづらいという感じはします。
+</p>
+<p>
+  ラジオボタンを、オリジナルのデザインにしてみましょう。方法を解説します。
+</p>
+<p>
+  1. ラジオボタンにラベルを付ける
+</p>
+<p>
+  2. ラジオボタンを非表示にする
+</p>
+<p>
+  3. 兄弟セレクタを使って、チェックを検知
+</p>
+<p>
+  以下は、ラジオボタンをオリジナルのデザインにするサンプルです。チェックされた項目が、ピンクになります。ラジオボタンに見えないですが、ラジオボタンとして機能します。
+</p>
+<style>
+  /* ラジオボタンを非表示にする */
+  .original_radio input[type=radio] {
+    display:none;
+  }
+  
+  /* 選択されたチェックボックスの兄弟であるlabel */
+  .original_radio input[type=radio]:checked + label {
+    background:pink;
+  }
+  
+  .original_radio {
+    display:flex;
+    flex-wrap:wrap;
+    width:300px;
+  }
+  .original_radio li {
+    width:100%;
+    border:1px solid #ddd;
+    border-bottom:none;
+  }
+  .original_radio li:first-child {
+    border-radius:5px 5px 0 0;
+  }
+  .original_radio li:last-child {
+    border-radius:0 0 5px 5px;
+    border-bottom:1px solid #ddd;
+  }
+  .original_radio label {
+    display:block;
+    width:100%;
+    padding:10px 20px;
+    cursor:pointer;
+  }
+</style>
+  <b>価格</b>
+  <ul class="original_radio">
+    <li>
+      <input type="radio" name="price" id="original_price1" value="1000"><label for="original_price1">1000円未満</label>
+    </li>
+    <li>
+      <input type="radio" name="price" id="original_price2" value="2000"><label for="original_price2">1000円～2000円まで</label>
+    </li>
+    <li>
+      <input type="radio" name="price" id="original_price3" value="3000"><label for="original_price3">2000円～3000円まで</label>
+    </li>
+    <li>
+      <input type="radio" name="price" id="original_price4" value="99999999"><label for="original_price4">3000円以上</label>
+    </li>
+  </ul>
+<pre>
+&lt;style&gt;
+  /* ラジオボタンを非表示にする */
+  .original_radio input[type=radio] {
+    display:none;
+  }
+  
+  /* 選択されたチェックボックスの兄弟であるlabel */
+  .original_radio input[type=radio]:checked + label {
+    background:pink;
+  }
+  
+  .original_radio {
+    display:flex;
+    flex-wrap:wrap;
+    width:300px;
+  }
+  .original_radio li {
+    width:100%;
+    border:1px solid #ddd;
+    border-bottom:none;
+  }
+  .original_radio li:first-child {
+    border-radius:5px 5px 0 0;
+  }
+  .original_radio li:last-child {
+    border-radius:0 0 5px 5px;
+    border-bottom:1px solid #ddd;
+  }
+  .original_radio label {
+    display:block;
+    width:100%;
+    padding:10px 20px;
+    cursor:pointer;
+  }
+&lt;/style&gt;
+
+&lt;b&gt;価格&lt;/b&gt;
+&lt;ul class="original_radio"&gt;
+  &lt;li&gt;
+    &lt;input type="radio" name="price" id="original_price1" value="1000"&gt;&lt;label for="original_price1"&gt;1000円未満&lt;/label&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;input type="radio" name="price" id="original_price2" value="2000"&gt;&lt;label for="original_price2"&gt;1000円～2000円まで&lt;/label&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;input type="radio" name="price" id="original_price3" value="3000"&gt;&lt;label for="original_price3"&gt;2000円～3000円まで&lt;/label&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;input type="radio" name="price" id="original_price4" value="99999999"&gt;&lt;label for="original_price4"&gt;3000円以上&lt;/label&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+  </div>
+  <div class="bottom">
+    <!-- bottom -->
+
+  </div>
+</div>
+
+        </div>
+        <div class="side">
+          <!-- side -->
+<div class="side-list">
+  <div class="side-list-title">
+    コンテンツ
+  </div>
+  <ul>
+    <li><a href="/list.html">記事一覧</a></li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="footer">
+        <!-- footer -->
+<a href="https://kimoto-system.co.jp/message">サイト運営 木本システム <br>Copyright © 2020-2020 Yuki Kimoto</a>
+
+      </div>
+    </div>
+  </body>
+</html>
