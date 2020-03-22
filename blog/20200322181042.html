@@ -7,8 +7,8 @@
 <link rel="icon" type="image/x-icon" href="/images/webdesign-logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
 
-<title>iphone/safariで電話番号の文字が青くなってしまうのをCSSで解決 - Webデザイン入門 - Perlゼミ Webシステム開発用Webデザイン教材 </title>
-<meta name="description" content="iphone/safariで電話番号の文字が勝手に青くなってしまうのを解決するには、電話番号をaタグで囲んで、スタイルシート(CSS)を設定します。">
+<title>スタイルシート(CSS)を読み込む - Webデザイン入門 - Perlゼミ Webシステム開発用Webデザイン教材 </title>
+<meta name="description" content="スタイルシート(CSS)を読み込みましょう。スタイルシート(CSS)の読み込みは、HTMLヘッダで行います。">
   </head>
   <body>
     <div class="container">
@@ -29,31 +29,15 @@
 
   </div>
   <div class="middle">
-    <h2><a href="/blog/20200225082049.html">iphone/safariで電話番号の文字が青くなってしまうのをCSSで解決</a></h2>
+    <h2><a href="/blog/20200322181042.html">スタイルシート(CSS)を読み込む</a></h2>
 <p>
-  iphone/safariで電話番号の文字が勝手に青くなってしまうのを解決するには、電話番号をaタグで囲んで、スタイルシート(CSS)を設定します。
+  スタイルシート(CSS)を読み込みましょう。スタイルシート(CSS)の読み込みは、<a href="/blog/20200202092826.html">HTMLヘッダ</a>で行います。
 </p>
-<style>
-  .phone a {
-    color:orange;
-  }
-</style>
-<div class="phone">
-  <a>03-1234-5678</a>
-</div>
 <pre>
-&lt;style&gt;
-  .phone a {
-    color:orange;
-  }
-&lt;/style&gt;
-
-&lt;div class="phone"&gt;
-  &lt;a&gt;03-1234-5678&lt;/a&gt;
-&lt;/div&gt;
+&lt;link rel="stylesheet" type="text/css" href="/css/common.css"&gt;
 </pre>
 <p>
-  iphone/safariは、電話番号の場合に、自動的にaタグを挿入するので、あらかじめaタグを挿入することで、これを防ぎます。
+  上のサンプルは、ドキュメントルートの「css」というディレクトリに「common.css」が配置されている場合に、スタイルシート(CSS)を読み込むサンプルです。
 </p>
 
   </div>
