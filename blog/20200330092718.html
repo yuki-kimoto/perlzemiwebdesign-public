@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/images/webdesign-logo.png">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+
+<title>【HTML5】styleタグ - スタイルシート(CSS)を記述する - Perlゼミ Webデザイン入門 -  Webシステム開発者のWebデザイン教材</title>
+<meta name="description" content="styleタグを使うと、HTMLの中にスタイルシート(CSS)を記述することができます。">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <!-- header -->
+<div class="main">
+  <h1>
+    <a href="/">Perlゼミ Webデザイン入門 -  Webシステム開発者のWebデザイン教材</a>
+  </h1>
+</div>
+
+      </div>
+      <div class="main">
+        <div class="content">
+          <div class="entry">
+  <div class="top">
+    <!-- top -->
+
+  </div>
+  <div class="middle">
+    <h2><a href="/blog/20200330092718.html">【HTML5】styleタグ - スタイルシート(CSS)を記述する</a></h2>
+<p>
+  <b>styleタグ</b>を使うと、HTMLの中にスタイルシート(CSS)を記述することができます。
+</p>
+<style>
+  h5 {
+    color:red;
+  }
+</style>
+<pre>
+&lt;style&gt;
+  h5 {
+    color:red;
+  }
+&lt;/style&gt;
+</pre>
+<h5>h5タグ - 見出し5</h5>
+<h3>HTMLの中にstyleタグを使ってスタイルを書いてもいいの?</h3>
+<p>
+  「HTMLの中にstyleタグを使ってスタイルを書いてもいいの?」と質問したくなりますね。
+</p>
+<h4>原則はスタイルシート(CSS)ファイルを読み込むのがよい</h4>
+<p>
+  原則は<a href="/blog/20200322181042.html">スタイルシート(CSS)ファイルを読み込む</a>のがベストプラクティスです。Webサイトの基本的なスタイルシートの設定は「/css/default.css」のようなスタールシート(CSS)ファイルに記述して、それを<a href="/blog/20200202092826.html">HTMLヘッダ</a>で、読み込みます。
+</p>
+<pre>
+&lt;link rel="stylesheet" type="text/css" href="/css/default.css"&gt;
+</pre>
+<h4>お試しでスタイルを書く場合</h4>
+<p>
+  お試してスタイルを書く場合は、よくsytleタグを使います。スタイルシート(CSS)ファイルは、別のディレクトリにあるので、開くのが面倒です。
+</p>
+<p>
+  こうしたら、どうなるんだろう? とちょっと試したい場合は、styleタグを使うことが多いです。
+</p>
+<h4>プログラムで、スタイルを変更したい場合</h4>
+<p>
+  <a href="https://web.perlzemi.com/">Webシステム開発</a>をしているときに、たまに、<a href="https://tutorial.perlzemi.com/blog/20161023147731.html">if文</a>で条件分岐して、プログラムでスタイル自体を変更したい場合があります。
+</p>
+<p>
+  そのような場合は、styleタグを使って、条件を満たす場合だけ、条件を設定するということができます。
+</p>
+<p>
+  でも、これは、ごくたまにしかないので、スタイルシート(CSS)ファイルに、すべて書くことを、原則としてください。
+</p>
+
+  </div>
+  <div class="bottom">
+    <!-- bottom -->
+
+  </div>
+</div>
+
+        </div>
+        <div class="side">
+          <!-- side -->
+<div class="side-list">
+  <div class="side-list-title">
+    コンテンツ
+  </div>
+  <ul>
+    <li><a href="/list.html">記事一覧</a></li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="footer">
+        <div class="kimoto_system_link">
+  <a href="https://kimoto-system.co.jp/message">
+    <img src="https://kimoto-system.co.jp/images/kimoto-system-logo.png" alt="Perl Webシステム開発">
+    Perl Webシステム開発の木本システム
+  </a>
+</div>
+
+<div class="copyright">
+  Copyright © Yuki Kimoto
+</div>
+
+      </div>
+    </div>
+  </body>
+</html>
