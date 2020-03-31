@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/images/webdesign-logo.png">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+
+<title>【CSS3】文字を太字にする - Perlゼミ Webデザイン入門 -  Webシステム開発者のWebデザイン教材</title>
+<meta name="description" content="文字を太字にするには、「font-weight:bold;」をスタイルシート(CSS)で指定します。">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <!-- header -->
+<div class="main">
+  <h1>
+    <a href="/">Perlゼミ Webデザイン入門 -  Webシステム開発者のWebデザイン教材</a>
+  </h1>
+</div>
+
+      </div>
+      <div class="main">
+        <div class="content">
+          <div class="entry">
+  <div class="top">
+    <!-- top -->
+
+  </div>
+  <div class="middle">
+    <h2><a href="/blog/20200331101526.html">【CSS3】文字を太字にする</a></h2>
+<p>
+  <b>文字を太字</b>にするには、「font-weight:bold;」をスタイルシート(CSS)で指定します。
+</p>
+<p>
+  <span style="font-weight:bold;">太字</span>
+</p>
+<pre>
+&lt;span style="font-weight:bold;"&gt;太字&lt;/span&gt;
+</pre>
+<h3>bタグとスタイルシート(CSS)の太字の使い分けは?</h3>
+<p>
+  <a href="/blog/20200221093554.html">bタグ</a>を使っても文字を太字にできます。本文の中で、ある文字だけを太字にしたい場合は、bタグは簡単です。
+</p>
+<p>
+  こんにちは、ようこそ、<b>食べ放題</b>。
+</p>
+<pre>
+こんにちは、ようこそ、&lt;b&gt;食べ放題&lt;/b&gt;。
+</pre>
+<p>
+  <a href="/blog/20200226082049.html">divタグ</a>などで囲まれており、他の設定もスタイルシート(CSS)で行っている場合は「font-weight:bold;」を指定すると合わせて行えます。
+</p>
+<style>
+  .foo {
+    font-weight:bold;
+    padding:10px 20px;
+    border:1px solid #ddd;
+  }
+</style>
+<div class="foo">
+  こんにちは
+</div>
+<pre>
+&lt;style&gt;
+  .foo {
+    font-weight:bold;
+    padding:10px 20px;
+    border:1px solid #ddd;
+  }
+&lt;/style&gt;
+
+&lt;div class="foo"&gt;
+  こんにちは
+&lt;/div&gt;
+</pre>
+
+  </div>
+  <div class="bottom">
+    <!-- bottom -->
+
+  </div>
+</div>
+
+        </div>
+        <div class="side">
+          <!-- side -->
+<div class="side-list">
+  <div class="side-list-title">
+    コンテンツ
+  </div>
+  <ul>
+    <li><a href="/list.html">記事一覧</a></li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="footer">
+        <div class="kimoto_system_link">
+  <a href="https://kimoto-system.co.jp/message">
+    <img src="https://kimoto-system.co.jp/images/kimoto-system-logo.png" alt="Perl Webシステム開発">
+    Perl Webシステム開発の木本システム
+  </a>
+</div>
+
+<div class="copyright">
+  Copyright © Yuki Kimoto
+</div>
+
+      </div>
+    </div>
+  </body>
+</html>
