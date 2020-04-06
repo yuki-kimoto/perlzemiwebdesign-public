@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/images/webdesign-logo.png">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+
+<title>【CSS3】border - ボーダーを設定する - Perlゼミ Webデザイン入門 -  Webシステム開発者のWebデザイン教材</title>
+<meta name="description" content="ボーダーを設定するには、スタイルシート(CSS)でborderを指定します。borderには、ボーダーの太さ、ボーダーの種類、色を空白で区切って指定します。">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <!-- header -->
+<div class="main">
+  <h1>
+    <a href="/">Perlゼミ Webデザイン入門 -  Webシステム開発者のWebデザイン教材</a>
+  </h1>
+</div>
+
+      </div>
+      <div class="main">
+        <div class="content">
+          <div class="entry">
+  <div class="top">
+    <!-- top -->
+
+  </div>
+  <div class="middle">
+    <h2><a href="/blog/20200406103319.html">【CSS3】border - ボーダーを設定する</a></h2>
+<p>
+  ボーダーを設定するには、スタイルシート(CSS)で<b>border</b>を指定します。borderには、ボーダーの太さ、ボーダーの種類、色を空白で区切って指定します。
+</p>
+<div style="border:1px solid #ddd;">
+  ボーダー
+</div>
+<pre>
+&lt;div style="border:1px solid #ddd;"&gt;
+  ボーダー
+&lt;/div&gt;
+</pre>
+<p>
+  solidは、1本線を表すボーダーの種類の指定です。
+</p>
+<p>
+  ボーダーの種類は、HTMLクイックリファレンスが参考になります。
+</p>
+<p>
+  <a target="_blank" href="http://www.htmq.com/style/border-style.shtml">border-style - ボーダーのスタイルを指定する - HTMLクイックリファレンス</a>
+</p>
+<h3>ボーダーの内側に適切にパディングを設定する</h3>
+<p>
+  ボーダーの内側に適切にパディングを設定してみましょう。
+</p>
+<div style="border:1px solid #ddd;padding:10px 20px;">
+  ボーダー
+</div>
+<h3>ボーダーの位置を指定する</h3>
+<p>
+  「border-top」「border-bottom」「border-left」「border-right」を使用すると、一つの側だけにボーダーを設定することができます。
+</p>
+<div style="border-top:1px solid blue;margin-bottom:10px;background:#eee;">
+  ボーダー上
+</div>
+<div style="border-bottom:1px solid blue;margin-bottom:10px;background:#eee;">
+  ボーダー下
+</div>
+<div style="border-left:1px solid blue;margin-bottom:10px;background:#eee;">
+  ボーダー左
+</div>
+<div style="border-right:1px solid blue;margin-bottom:10px;background:#eee;">
+  ボーダー右
+</div>
+<pre>
+&lt;div style="border-top:1px solid blue;margin-bottom:10px;background:#eee;"&gt;
+  ボーダー上
+&lt;/div&gt;
+
+&lt;div style="border-bottom:1px solid blue;margin-bottom:10px;background:#eee;"&gt;
+  ボーダー下
+&lt;/div&gt;
+
+&lt;div style="border-left:1px solid blue;margin-bottom:10px;background:#eee;"&gt;
+  ボーダー左
+&lt;/div&gt;
+
+&lt;div style="border-right:1px solid blue;margin-bottom:10px;background:#eee;"&gt;
+  ボーダー右
+&lt;/div&gt;
+
+</pre>
+<p>
+  組み合わせることもできます。
+</p>
+<div style="border-top:1px solid blue;border-bottom:1px solid blue;margin-bottom:10px;background:#eee;">
+  ボーダー上下
+</div>
+<pre>
+&lt;div style="border-top:1px solid blue;border-bottom:1px solid blue;margin-bottom:10px;background:#eee;"&gt;
+  ボーダー上下
+&lt;/div&gt;
+</pre>
+
+  </div>
+  <div class="bottom">
+    <!-- bottom -->
+
+  </div>
+</div>
+
+        </div>
+        <div class="side">
+          <!-- side -->
+<div class="side-list">
+  <div class="side-list-title">
+    コンテンツ
+  </div>
+  <ul>
+    <li><a href="/list.html">記事一覧</a></li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="footer">
+        <div class="kimoto_system_link">
+  <a href="https://kimoto-system.co.jp/message">
+    <img src="https://kimoto-system.co.jp/images/kimoto-system-logo.png" alt="Perl Webシステム開発">
+    Perl Webシステム開発の木本システム
+  </a>
+</div>
+
+<div class="copyright">
+  Copyright © Yuki Kimoto
+</div>
+
+      </div>
+    </div>
+  </body>
+</html>
