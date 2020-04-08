@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/images/webdesign-logo.png">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+
+<title>【CSS3】padding - パディングを設定する - Perlゼミ Webデザイン入門 -  Webシステム開発者のWebデザイン</title>
+<meta name="description" content="パディングを設定するにはpaddingをスタイルシート(CSS)で設定します。パディングとは、ブロックの内側にできる間隔のことです。">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <!-- header -->
+<div class="main">
+  <h1>
+    <a href="/">Perlゼミ Webデザイン入門 -  Webシステム開発者のWebデザイン</a>
+  </h1>
+</div>
+
+      </div>
+      <div class="main">
+        <div class="content">
+          <div class="entry">
+  <div class="top">
+    <!-- top -->
+
+  </div>
+  <div class="middle">
+    <h2><a href="/blog/20200408111754.html">【CSS3】padding - パディングを設定する</a></h2>
+<p>
+  パディングを設定するには<b>padding</b>をスタイルシート(CSS)で設定します。パディングとは、ブロックの内側にできる間隔のことです。
+</p>
+<div style="padding:10px;background:#eef">
+  パディングを設定
+</div>
+<p>
+  <br>
+</p>
+<div style="background:#eef">
+  パディングなし
+</div>
+<pre>
+&lt;div style="padding:10px;background:#eef"&gt;
+  パディングを設定
+&lt;/div&gt;
+&lt;br&gt;
+&lt;div style="background:#eef"&gt;
+  パディングなし
+&lt;/div&gt;
+</pre>
+<h4>パディングの効果</h4>
+<p>
+  パディングの効果は、適切な間隔を作ることで、文字を読みやすくすることです。
+</p>
+<h4>上、右、下、左のそれぞれにパディングを設定</h4>
+<p>
+  上、右、下、左のそれぞれにパディングを設定できます。設定する順番は、上、右、下、左の順です。
+</p>
+<div style="padding:10px 20px 30px 40px;background:#eef">
+  パディングを上、右、下、左のそれぞれに設定
+</div>
+<pre>
+&lt;div style="padding:10px 20px 30px 40px;background:#eef"&gt;
+  パディングを上、右、下、左のそれぞれに設定
+&lt;/div&gt;
+</pre>
+<h4>上下、左右のそれぞれにパディングを設定</h4>
+<p>
+  上下、左右のそれぞれにパディングを設定できます。設定する順番は、上下、左右の順です。
+</p>
+<div style="padding:10px 30px;background:#eef">
+  パディングを上下、左右のそれぞれに設定
+</div>
+<pre>
+&lt;div style="padding:10px 30px;background:#eef"&gt;
+  パディングを上下、左右のそれぞれに設定
+&lt;/div&gt;
+</pre>
+<h4>上だけ、右だけ、下だけ、左だけにパディングを設定</h4>
+<p>
+  「padding-top」「padding-right」「padding-bottom」「padding-left」を使うと上だけ、右だけ、下だけ、左だけにパディングを設定することができます。
+</p>
+<div style="padding-top:10px;background:#eef">
+  パディングを上だけ設定
+</div>
+<p>
+  <br>
+</p>
+<div style="padding-right:10px;background:#eef;text-align:right;">
+  パディングを右だけ設定(テキスト右寄せ)
+</div>
+<p>
+  <br>
+</p>
+<div style="padding-bottom:10px;background:#eef">
+  パディングを下だけ設定
+</div>
+<p>
+  <br>
+</p>
+<div style="padding-left:10px;background:#eef">
+  パディングを左だけ設定
+</div>
+<pre>
+&lt;div style="padding-top:10px;background:#eef"&gt;
+  パディングを上だけ設定
+&lt;/div&gt;
+&lt;br&gt;
+&lt;div style="padding-right:10px;background:#eef;text-align:right;"&gt;
+  パディングを右だけ設定(テキスト右寄せ)
+&lt;/div&gt;
+&lt;br&gt;
+&lt;div style="padding-bottom:10px;background:#eef"&gt;
+  パディングを下だけ設定
+&lt;/div&gt;
+&lt;br&gt;
+&lt;div style="padding-left:10px;background:#eef"&gt;
+  パディングを左だけ設定
+&lt;/div&gt;
+</pre>
+<h3>文字の縦位置をちょうど真ん中にするには?</h3>
+<p>
+  文字の縦位置をちょうど真ん中にするには、上パディングをわずかに増やします。デフォルトは、フォントのベースラインが、基準になるので、日本語の場合は、やや上が狭いのです。フォントによって、微妙に異なるので、全ブラウザで、統一することは難しいですが、なるべくちょうど真ん中に合わせてみましょう。
+</p>
+<p>
+  微妙な差が見えるでしょうか?
+</p>
+<div style="padding:11px 20px 10px 20px;background:#eef">
+  文字の縦位置をちょうど真ん中にする
+</div>
+<p>
+  <br>
+</p>
+<div style="padding:10px 20px 10px 20px;background:#eef">
+  デフォルトは、フォントのベースラインが、基準になるので、やや上が狭い
+</div>
+<pre>
+&lt;div style="padding:11px 20px 10px 20px;background:#eef"&gt;
+  文字の縦位置をちょうど真ん中にする
+&lt;/div&gt;
+&lt;br&gt;
+&lt;div style="padding:10px 20px 10px 20px;background:#eef"&gt;
+  デフォルトは、フォントのベースラインが、基準になるので、やや上が狭い
+&lt;/div&gt;
+</pre>
+
+  </div>
+  <div class="bottom">
+    <!-- bottom -->
+
+  </div>
+</div>
+
+        </div>
+        <div class="side">
+          <!-- side -->
+<div class="side-list">
+  <div class="side-list-title">
+    コンテンツ
+  </div>
+  <ul>
+    <li><a href="/list.html">記事一覧</a></li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="footer">
+        <div class="kimoto_system_link">
+  <a href="https://kimoto-system.co.jp/message">
+    <img src="https://kimoto-system.co.jp/images/kimoto-system-logo.png" alt="Perl Webシステム開発">
+    Perl Webシステム開発の木本システム
+  </a>
+</div>
+
+<div class="copyright">
+  Copyright © Yuki Kimoto
+</div>
+
+      </div>
+    </div>
+  </body>
+</html>
