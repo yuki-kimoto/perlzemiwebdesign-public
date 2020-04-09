@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/images/webdesign-logo.png">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+
+<title>【CSS3】margin - マージンを設定する - Perlゼミ Webデザイン入門 -  Webシステム開発者のWebデザイン</title>
+<meta name="description" content="マージンを設定するにはmarginをスタイルシート(CSS)で設定します。マージンとは、ブロックの外側にできる間隔のことです。">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <!-- header -->
+<div class="main">
+  <h1>
+    <a href="/">Perlゼミ Webデザイン入門 -  Webシステム開発者のWebデザイン</a>
+  </h1>
+</div>
+
+      </div>
+      <div class="main">
+        <div class="content">
+          <div class="entry">
+  <div class="top">
+    <!-- top -->
+
+  </div>
+  <div class="middle">
+    <h2><a href="/blog/20200409094600.html">【CSS3】margin - マージンを設定する</a></h2>
+<p>
+  マージンを設定するには<b>margin</b>をスタイルシート(CSS)で設定します。マージンとは、ブロックの外側にできる間隔のことです。
+</p>
+<div style="margin:10px;background:#eef">
+  マージンを設定
+</div>
+<div style="margin:10px;background:#eef">
+  マージンを設定
+</div>
+<div style="margin:10px;background:#eef">
+  マージンを設定
+</div>
+<pre>
+&lt;div style="margin:10px;background:#eef"&gt;
+  マージンを設定
+&lt;/div&gt;
+
+&lt;div style="margin:10px;background:#eef"&gt;
+  マージンを設定
+&lt;/div&gt;
+
+&lt;div style="margin:10px;background:#eef"&gt;
+  マージンを設定
+&lt;/div&gt;
+</pre>
+<p>
+  マージンがブロックの外側にできる間隔、<a href="/blog/20200408111754.html">パディング</a>がブロックの内側にできる間隔です。
+</p>
+<h4>マージンの効果</h4>
+<p>
+  マージンの効果は、ブロックの間に、適切な間隔を作ることで、文字を読みやすくすることです。
+</p>
+<h4>上、右、下、左のそれぞれにマージンを設定</h4>
+<p>
+  上、右、下、左のそれぞれにマージンを設定できます。設定する順番は、上、右、下、左の順です。
+</p>
+<div style="margin:10px 20px 30px 40px;background:#eef">
+  マージンを上、右、下、左のそれぞれに設定
+</div>
+<pre>
+&lt;div style="margin:10px 20px 30px 40px;background:#eef"&gt;
+  マージンを上、右、下、左のそれぞれに設定
+&lt;/div&gt;
+</pre>
+<h4>上下、左右のそれぞれにマージンを設定</h4>
+<p>
+  上下、左右のそれぞれにマージンを設定できます。設定する順番は、上下、左右の順です。
+</p>
+<div style="margin:10px 30px;background:#eef">
+  マージンを上下、左右のそれぞれに設定
+</div>
+<pre>
+&lt;div style="margin:10px 30px;background:#eef"&gt;
+  マージンを上下、左右のそれぞれに設定
+&lt;/div&gt;
+</pre>
+<h4>上だけ、右だけ、下だけ、左だけにマージンを設定</h4>
+<p>
+  「margin-top」「margin-right」「margin-bottom」「margin-left」を使うと上だけ、右だけ、下だけ、左だけにマージンを設定することができます。
+</p>
+<div style="margin-top:10px;background:#eef">
+  マージンを上だけ設定
+</div>
+<div style="margin-right:10px;background:#eef;">
+  マージンを右だけ設定
+</div>
+<div style="margin-bottom:10px;background:#eef">
+  マージンを下だけ設定
+</div>
+<div style="margin-left:10px;background:#eef">
+  マージンを左だけ設定
+</div>
+<pre>
+&lt;div style="margin-top:10px;background:#eef"&gt;
+  マージンを上だけ設定
+&lt;/div&gt;
+&lt;div style="margin-right:10px;background:#eef;text-align:right;"&gt;
+  マージンを右だけ設定(テキスト右寄せ)
+&lt;/div&gt;
+&lt;div style="margin-bottom:10px;background:#eef"&gt;
+  マージンを下だけ設定
+&lt;/div&gt;
+&lt;div style="margin-left:10px;background:#eef"&gt;
+  マージンを左だけ設定
+&lt;/div&gt;
+</pre>
+<h3>上下マージンの相殺</h3>
+<p>
+  上の要素の下のマージンと、下の要素の上のマージンは、相殺されます。「margin-bottom:20px;」と「margin-top:10px;」が足されて30pxになるのではなくって、相殺されて、大きい方の20pxになることに注意してください。
+</p>
+<div style="margin-bottom:20px;background:#eef">
+  マージンを設定
+</div>
+<div style="margin-top:10px;background:#eef">
+  マージンを設定
+</div>
+<pre>
+&lt;div style="margin-bottom:20px;background:#eef"&gt;
+  マージンを設定
+&lt;/div&gt;
+&lt;div style="margin-top:10px;background:#eef"&gt;
+  マージンを設定
+&lt;/div&gt;
+</pre>
+<p>
+  左右マージンについては、そのようなことは起こりません。
+</p>
+<div>
+  <button style="margin-right:20px;">
+    ボタン
+  </button>
+  <button style="margin-left:10px;">
+    ボタン
+  </button>
+</div>
+<pre>
+&lt;div&gt;
+  &lt;button style="margin-right:20px;"&gt;
+    ボタン
+  &lt;/button&gt;
+  &lt;button style="margin-left:10px;"&gt;
+    ボタン
+  &lt;/button&gt;
+&lt;/div&gt;
+</pre>
+<h3>ブロックを中央寄せするための左右の自動マージン</h3>
+<p>
+  ブロックを中央寄せするテクニックとして、左右マージンに「auto」を設定します。
+</p>
+<div style="margin:0 auto;width:200px;background:#eef;">
+  ブロック中央寄せ
+</div>
+<pre>
+&lt;div style="margin:0 auto;width:200px;background:#eef;"&gt;
+  ブロック中央寄せ
+&lt;/div&gt;
+</pre>
+<h3>マージンのパーセント指定</h3>
+<p>
+  マージンはパーセントでも指定できます。全体でちょうど100%にするように、隙間を空けたい場合に便利です。
+</p>
+<div style="display:flex">
+  <div style="width:49%;margin-right:1%;background:#eef;">
+    左ブロック
+  </div>
+  <div style="width:49%;margin-left:1%;background:#eef;">
+    右ブロック
+  </div>
+</div>
+<pre>
+&lt;div style="display:flex"&gt;
+  &lt;div style="width:49%;margin-right:1%;background:#eef;"&gt;
+    左ブロック
+  &lt;/div&gt;
+  &lt;div style="width:49%;margin-left:1%;background:#eef;"&gt;
+    右ブロック
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+  </div>
+  <div class="bottom">
+    <!-- bottom -->
+
+  </div>
+</div>
+
+        </div>
+        <div class="side">
+          <!-- side -->
+<div class="side-list">
+  <div class="side-list-title">
+    コンテンツ
+  </div>
+  <ul>
+    <li><a href="/list.html">記事一覧</a></li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="footer">
+        <div class="kimoto_system_link">
+  <a href="https://kimoto-system.co.jp">
+    <img src="https://kimoto-system.co.jp/images/kimoto-system-logo.png" alt="Perl Webシステム開発">
+    Perl Webシステム開発の木本システム
+  </a>
+</div>
+
+<div class="copyright">
+  Copyright © Yuki Kimoto
+</div>
+
+      </div>
+    </div>
+  </body>
+</html>
