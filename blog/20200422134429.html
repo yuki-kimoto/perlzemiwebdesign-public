@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/images/webdesign-logo.png">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+
+<title>【CSS3】クラスセレクタ - Perlゼミ Webデザイン入門 -  Webシステム開発者のWebデザイン</title>
+<meta name="description" content="クラスセレクタは、スタイルシート(CSS)を適用する要素のクラスを指定するためのものです。">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <!-- header -->
+<div class="main">
+  <h1>
+    <a href="/">Perlゼミ Webデザイン入門 -  Webシステム開発者のWebデザイン</a>
+  </h1>
+</div>
+
+      </div>
+      <div class="main">
+        <div class="content">
+          <div class="entry">
+  <div class="top">
+    <!-- top -->
+
+  </div>
+  <div class="middle">
+    <h2><a href="/blog/20200422134429.html">【CSS3】クラスセレクタ</a></h2>
+<p>
+  <b>クラスセレクタ</b>は、スタイルシート(CSS)を適用する要素のクラスを指定するためのものです。
+</p>
+<p>
+  クラスセレクタは「.」で始め、適用したい要素のクラス名を指定します。「.menu」の部分がクラスセレクタです。
+</p>
+<pre>
+.menu {
+  color:red;
+}
+</pre>
+<p>
+  クラスセレクタを使ってみましょう。
+</p>
+<style>
+  .menu {
+    color:red;
+  }
+</style>
+<div class="menu">
+  焼肉
+</div>
+<pre>
+&lt;style&gt;
+.menu {
+  color:red;
+}
+&lt;/style&gt;
+
+&lt;div class="menu"&gt;
+  焼肉
+&lt;/div&gt;
+</pre>
+<h3>クラスセレクタとIDセレクタのどちらを使うべきですか?</h3>
+<p>
+  基本的には、スタイルシート(CSS)の中では、クラスセレクタのみを使うのが、お勧めです。
+</p>
+<p>
+  <a href="/blog/20200423134429.html">IDセレクタ</a>は、要素が一意である必要があるのに対し、クラスセレクタは、同じクラス名を持つ複数の要素に対しても適用でき、柔軟です。
+</p>
+
+  </div>
+  <div class="bottom">
+    <!-- bottom -->
+
+  </div>
+</div>
+
+        </div>
+        <div class="side">
+          <!-- side -->
+<div class="side-list">
+  <div class="side-list-title">
+    コンテンツ
+  </div>
+  <ul>
+    <li><a href="/list.html">記事一覧</a></li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="footer">
+        <div class="kimoto_system_link">
+  <a href="https://kimoto-system.co.jp">
+    <img src="https://kimoto-system.co.jp/images/kimoto-system-logo.png" alt="Perl Webシステム開発">
+    Perl Webシステム開発の木本システム
+  </a>
+</div>
+
+<div class="copyright">
+  Copyright © Yuki Kimoto
+</div>
+
+      </div>
+    </div>
+  </body>
+</html>
