@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/images/webdesign-logo.png">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+
+<title>【CSS3】子セレクタ - Perlゼミ Webデザイン入門 -  Webシステム開発者のWebデザイン</title>
+<meta name="description" content="子セレクタは、スタイルシート(CSS)を適用する要素を、親子関係にあるIDセレクタ、クラスセレクタ、要素セレクタを使って指定することができる機能です。">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <!-- header -->
+<div class="main">
+  <h1>
+    <a href="/">Perlゼミ Webデザイン入門 -  Webシステム開発者のWebデザイン</a>
+  </h1>
+</div>
+
+      </div>
+      <div class="main">
+        <div class="content">
+          <div class="entry">
+  <div class="top">
+    <!-- top -->
+
+  </div>
+  <div class="middle">
+    <h2><a href="/blog/20200420134429.html">【CSS3】子セレクタ</a></h2>
+<p>
+  <b>子セレクタ</b>は、スタイルシート(CSS)を適用する要素を、親子関係にある<a href="/blog/20200423134429.html">IDセレクタ</a>、<a href="/blog/20200422134429.html">クラスセレクタ</a>、<a href="/blog/20200421134429.html">要素セレクタ</a>を使って指定することができる機能です。
+</p>
+<p>
+  以下の例では「.food > ul」という指定で「.food」の直接の子である「ul」を指定しています。「.food > ul > li」という指定で「.food」の直接の子である「ul」の直接の子である「li」を指定しています。
+</p>
+<p>
+  <a href="/blog/20200423141506.html">子孫セレクタ</a>と異なり直接の子だけが対象になることに注意してください。
+</p>
+<style>
+  .food > ul {
+    border:1px solid #ddd;
+  }
+  .food > ul > li {
+    color:red;
+    list-style:none;
+    padding-left:5px;
+  }
+</style>
+<div class="food">
+  <ul>
+    <li>焼肉</li>
+    <li>サラダ</li>
+    <li>うどん</li>
+  </ul>
+</div>
+<pre>
+&lt;style&gt;
+  .food &gt; ul {
+    border:1px solid #ddd;
+  }
+  .food &gt; ul &gt; li {
+    color:red;
+    list-style:none;
+    padding-left:5px;
+  }
+&lt;/style&gt;
+
+&lt;div class="food"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;焼肉&lt;/li&gt;
+    &lt;li&gt;サラダ&lt;/li&gt;
+    &lt;li&gt;うどん&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+  </div>
+  <div class="bottom">
+    <!-- bottom -->
+
+  </div>
+</div>
+
+        </div>
+        <div class="side">
+          <!-- side -->
+<div class="side-list">
+  <div class="side-list-title">
+    コンテンツ
+  </div>
+  <ul>
+    <li><a href="/list.html">記事一覧</a></li>
+  </ul>
+</div>
+
+        </div>
+      </div>
+      <div class="footer">
+        <div class="kimoto_system_link">
+  <a href="https://kimoto-system.co.jp">
+    <img src="https://kimoto-system.co.jp/images/kimoto-system-logo.png" alt="Perl Webシステム開発">
+    Perl Webシステム開発の木本システム
+  </a>
+</div>
+
+<div class="copyright">
+  Copyright © Yuki Kimoto
+</div>
+
+      </div>
+    </div>
+  </body>
+</html>
