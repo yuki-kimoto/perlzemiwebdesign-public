@@ -7,8 +7,8 @@
 <link rel="icon" type="image/x-icon" href="/images/webdesign-logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
 
-<title>hover疑似クラス - CSS入門【CSS3対応】 - Webデザイン入門 -  Perl Web開発者のWebデザイン</title>
-<meta name="description" content="hover疑似クラスは、要素の上にカーソルを乗せたときのスタイルを設定するための疑似的なクラスです。aタグと組み合わせて使われます。">
+<title>first-child疑似クラス - CSS入門【CSS3対応】 - Webデザイン入門 -  Perl Web開発者のWebデザイン</title>
+<meta name="description" content="first-child疑似クラスは、自分の親から見て、最初の兄弟にスタイルを設定するための疑似的なクラスです。liタグと組み合わせて使われることが多いです。">
   </head>
   <body>
     <div class="container">
@@ -54,29 +54,39 @@
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20200418150524.html">hover疑似クラス - CSS入門【CSS3対応】</a></h2>
+<h2><a href="/blog/20200416134429.html">first-child疑似クラス - CSS入門【CSS3対応】</a></h2>
 <p>
-  hover疑似クラスは、要素の上にカーソルを乗せたときのスタイルを設定するための疑似的なクラスです。<a href="/blog/20200222082049.html">aタグ</a>と組み合わせて使われます。
+  first-child疑似クラスは、自分の親から見て、最初の兄弟にスタイルを設定するための疑似的なクラスです。<a href="/blog/20200306145137.html">liタグ</a>と組み合わせて使われることが多いです。
 </p>
 <style>
-  a:hover {
-    opacity:0.8;
+  .my_list li:first-child {
+    background:#ddd;
   }
 </style>
-<p>
-  <a href="/">ホバーで光るリンク</a>
-</p>
+<div class="my_list">
+  <ul>
+    <li>最初</li>
+    <li>次</li>
+    <li>最後</li>
+  </ul>
+</div>
 <pre>
 &lt;style&gt;
-  a:hover {
-    opacity:0.8;
+  .my_list li:first-child {
+    background:#ddd;
   }
 &lt;/style&gt;
 
-&lt;a href="/"&gt;ホバーで光るリンク&lt;/a&gt;
+&lt;div class="my_list"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;最初&lt;/li&gt;
+    &lt;li&gt;次&lt;/li&gt;
+    &lt;li&gt;最後&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
 </pre>
 <p>
-  マウスを上にのせると、光ります。
+  最初のliタグにだけスタイルが適用されます。
 </p>
 
   </div>

@@ -7,8 +7,8 @@
 <link rel="icon" type="image/x-icon" href="/images/webdesign-logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
 
-<title>hover疑似クラス - CSS入門【CSS3対応】 - Webデザイン入門 -  Perl Web開発者のWebデザイン</title>
-<meta name="description" content="hover疑似クラスは、要素の上にカーソルを乗せたときのスタイルを設定するための疑似的なクラスです。aタグと組み合わせて使われます。">
+<title>疑似クラス - CSS入門【CSS3対応】 - Webデザイン入門 -  Perl Web開発者のWebデザイン</title>
+<meta name="description" content="疑似クラスは「:」で始まる疑似的なクラスです。タグ名と組み合わせて使われることが一般的です。">
   </head>
   <body>
     <div class="container">
@@ -29,7 +29,10 @@
 
   </div>
   <div class="middle">
-    <div class="bread">
+    <style>
+  li { list-style:none }
+</style>
+<div class="bread">
   <ul itemscope itemtype="http://schema.org/BreadcrumbList">
     <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
       <a itemprop="item" href="/">
@@ -43,41 +46,30 @@
       </a>
       <meta itemprop="position" content="2" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-      <a itemprop="item" href="/blog/20200429173137.html">
-        <span itemprop="name">疑似クラス</span>
-      </a>
-      <meta itemprop="position" content="2" />
-    </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20200418150524.html">hover疑似クラス - CSS入門【CSS3対応】</a></h2>
+<h2><a href="/blog/20200429173137.html">疑似クラス - CSS入門【CSS3対応】</a></h2>
 <p>
-  hover疑似クラスは、要素の上にカーソルを乗せたときのスタイルを設定するための疑似的なクラスです。<a href="/blog/20200222082049.html">aタグ</a>と組み合わせて使われます。
-</p>
-<style>
-  a:hover {
-    opacity:0.8;
-  }
-</style>
-<p>
-  <a href="/">ホバーで光るリンク</a>
+  疑似クラスは「:」で始まる疑似的なクラスです。タグ名と組み合わせて使われることが一般的です。
 </p>
 <pre>
-&lt;style&gt;
-  a:hover {
-    opacity:0.8;
-  }
-&lt;/style&gt;
+li:last-child {
 
-&lt;a href="/"&gt;ホバーで光るリンク&lt;/a&gt;
+}
+
+a:visited {
+
+}
 </pre>
-<p>
-  マウスを上にのせると、光ります。
-</p>
+<ul>
+  <li><a href="/blog/20200428103139.html">visited疑似クラス</a></li>
+  <li><a href="/blog/20200418150524.html">hover疑似クラス</a></li>
+  <li><a href="/blog/20200416134429.html">first-child疑似クラス</a></li>
+  <li><a href="/blog/20200415134429.html">last-child疑似クラス</a></li>
+</ul>
 
   </div>
   <div class="bottom">

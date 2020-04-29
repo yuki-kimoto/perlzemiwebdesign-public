@@ -7,8 +7,8 @@
 <link rel="icon" type="image/x-icon" href="/images/webdesign-logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
 
-<title>hover疑似クラス - CSS入門【CSS3対応】 - Webデザイン入門 -  Perl Web開発者のWebデザイン</title>
-<meta name="description" content="hover疑似クラスは、要素の上にカーソルを乗せたときのスタイルを設定するための疑似的なクラスです。aタグと組み合わせて使われます。">
+<title>IDセレクタ - CSS入門【CSS3対応】 - Webデザイン入門 -  Perl Web開発者のWebデザイン</title>
+<meta name="description" content="IDセレクタは、スタイルシート(CSS)を適用する要素のIDを指定するためのものです。">
   </head>
   <body>
     <div class="container">
@@ -44,39 +44,56 @@
       <meta itemprop="position" content="2" />
     </li>
     <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-      <a itemprop="item" href="/blog/20200429173137.html">
-        <span itemprop="name">疑似クラス</span>
+      <a itemprop="item" href="/blog/20200426085612.html">
+        <span itemprop="name">セレクタ</span>
       </a>
-      <meta itemprop="position" content="2" />
+      <meta itemprop="position" content="3" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20200418150524.html">hover疑似クラス - CSS入門【CSS3対応】</a></h2>
+<h2><a href="/blog/20200417134429.html">IDセレクタ - CSS入門【CSS3対応】</a></h2>
 <p>
-  hover疑似クラスは、要素の上にカーソルを乗せたときのスタイルを設定するための疑似的なクラスです。<a href="/blog/20200222082049.html">aタグ</a>と組み合わせて使われます。
+  <b>IDセレクタ</b>は、スタイルシート(CSS)を適用する要素のIDを指定するためのものです。
 </p>
-<style>
-  a:hover {
-    opacity:0.8;
-  }
-</style>
 <p>
-  <a href="/">ホバーで光るリンク</a>
+  IDセレクタは「#」で始め、適用したい要素のID名を指定します。「#menu」の部分がIDセレクタです。
 </p>
 <pre>
+#menu {
+  color:red;
+}
+</pre>
+<p>
+  IDセレクタを使ってみましょう。
+</p>
+<style>
+  #menu {
+    color:red;
+  }
+</style>
+<div id="menu">
+  焼肉
+</div>
+<pre>
 &lt;style&gt;
-  a:hover {
-    opacity:0.8;
+  #menu {
+    color:red;
   }
 &lt;/style&gt;
 
-&lt;a href="/"&gt;ホバーで光るリンク&lt;/a&gt;
+&lt;div id="menu"&gt;
+  焼肉
+&lt;/div&gt;
 </pre>
+<h3>IDセレクタとクラスセレクタのどちらを使うべきですか?</h3>
 <p>
-  マウスを上にのせると、光ります。
+  基本的には、スタイルシート(CSS)の中では、<a href="/blog/20200422134429.html">クラスセレクタ</a>のみを使うのが、お勧めです。
+</p>
+<p>
+  IDセレクタは、要素が一意である必要があるのに対し、クラスセレクタは、同じクラス名を持つ複数の要素に対しても適用でき、柔軟です。
 </p>
 
   </div>
